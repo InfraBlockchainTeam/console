@@ -1,0 +1,683 @@
+openapi: 3.0.3
+info:
+    title: Infra Node API
+    description: >-
+        This is a sample Infra Node API Server based on the OpenAPI 3.0
+        specification.
+    version: 0.0.1
+servers:
+    - url: https://node.infrablockchain.io/api/v1
+tags:
+    - name: node
+      description: InfraBlockchain Node related API
+    - name: hyperion
+      description: Hyperion related API
+    - name: explorer
+      description: Explorer related API
+paths:
+    /nodes/{userId}:
+        get:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 목록 조회 API
+            description: 특정 유저의 InfraBlockchain 노드 목록 조회 API.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/NodeResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/NodeResponse"
+            security:
+                - api_key: []
+    /nodes/{userId}/{nodeId}:
+        get:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 조회 API
+            description: 특정 노드의 InfraBlockchain 노드 목록 조회 API.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: nodeId
+                  in: path
+                  description: InfraBlockchain 노드 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/NodeDetail"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/NodeDetail"
+            security:
+                - api_key: []
+
+    /nodes/create/{userId}/{nodeId}:
+        post:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 생성 API
+            description: InfraBlockchain 노드를 생성합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: nodeId
+                  in: path
+                  description: InfraBlockchain 노드 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/CreateNodeResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/CreateNodeResponse"
+            security:
+                - api_key: []
+
+    /nodes/stop/{userId}/{nodeId}:
+        post:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 정지 API
+            description: InfraBlockchain 노드를 정지합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: nodeId
+                  in: path
+                  description: InfraBlockchain 노드 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /nodes/run/{userId}/{nodeId}:
+        post:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 재실행 API
+            description: InfraBlockchain 노드를 재실행합니다.
+            requestBody:
+                description: InfraBlockchain 노드를 재실행하는데 필요한 설정 값을 필요로 합니다.
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NodeRequest"
+                required: true
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+    /nodes/delete/{userId}/{nodeId}:
+        delete:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 삭제 API
+            description: InfraBlockchain 노드를 삭제합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: nodeId
+                  in: path
+                  description: InfraBlockchain 노드 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+    /nodes/backup/{userId}/{nodeId}:
+        post:
+            tags:
+                - node
+            summary: InfraBlockchain 노드 백업 API
+            description: InfraBlockchain 노드에 대해 백업을 수행합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: nodeId
+                  in: path
+                  description: InfraBlockchain 노드 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /hyperion/stop/{userId}/{hyperionId}:
+        post:
+            tags:
+                - hyperion
+            summary: Hyperion 서버 정지 API
+            description: Hyperion 서버를 정지합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: hyperionId
+                  in: path
+                  description: InfraBlockchain Hyperion ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /hyperion/run/{userId}/{hyperionId}:
+        post:
+            tags:
+                - hyperion
+            summary: Hyperion 서버 재실행 API
+            description: Hyperion 서버를 재실행합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: hyperionId
+                  in: path
+                  description: InfraBlockchain Hyperion ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /hyperion/delete/{userId}/{hyperionId}:
+        delete:
+            tags:
+                - hyperion
+            summary: Hyperion 서버 삭제 API
+            description: Hyperion 서버를 삭제합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: hyperionId
+                  in: path
+                  description: InfraBlockchain Hyperion ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /explorer/stop/{userId}/{explorerId}:
+        post:
+            tags:
+                - explorer
+            summary: Explorer 정지 API
+            description: Explorer를 정지합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: explorerId
+                  in: path
+                  description: InfraBlockchain Explorer ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /explorer/run/{userId}/{explorerId}:
+        post:
+            tags:
+                - explorer
+            summary: Explorer 재실행 API
+            description: Explorer를 재실행합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: explorerId
+                  in: path
+                  description: InfraBlockchain Explorer ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+    /explorer/delete/{userId}/{explorerId}:
+        delete:
+            tags:
+                - explorer
+            summary: Explorer 삭제 API
+            description: Explorer를 삭제합니다.
+            parameters:
+                - name: userId
+                  in: path
+                  description: InfraBlockchain Console 유저 ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "609221b9-2af9-434d-8bce-eba7a77a2188"
+                - name: explorerId
+                  in: path
+                  description: InfraBlockchain Explorer ID
+                  required: true
+                  schema:
+                      type: string
+                      example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+            responses:
+                "200":
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/StatusResponse"
+            security:
+                - api_key: []
+
+components:
+    schemas:
+        NodeConfig:
+            type: object
+            properties:
+                version:
+                    type: string
+                    description: InfraBlockchain 노드 버전
+                    example: 2.3.0-rc1
+                agentName:
+                    type: string
+                    description: InfraBlockchain 에이전트 이름
+                    example: infra
+                peerAddresses:
+                    type: array
+                    description: InfraBlockchain Peer 주소 목록
+                    items:
+                        type: string
+                        example:
+                            [
+                                "peer1.infrablockchain.io:9876",
+                                "peer2.infrablockchain.io:9876",
+                            ]
+        CreateNodeRequest:
+            required:
+                - nodeType
+                - instanceType
+                - storage
+            type: object
+            properties:
+                nodeType:
+                    type: string
+                    default: api
+                    enum:
+                        - api
+                        - bp
+                        - ship
+                    description: 노드의 타입
+                backupSchedule:
+                    type: string
+                    example: 0 0 * * 1
+                    description: 노드의 백업 스케줄
+                instanceType:
+                    type: string
+                    example: t3.large
+                    description: 노드의 서버 인스턴스 타입
+                storage:
+                    type: string
+                    example: "1000 GiB"
+                    description: "노드의 스토리지 용량"
+                bpAccount:
+                    type: string
+                    example: mybpaccount
+                    description: 반드시 eosio naming convention을 따라야 합니다.
+                nodeConfig:
+                    $ref: "#/components/schemas/NodeConfig"
+        NodeRequest:
+            type: object
+            properties:
+                userId:
+                    type: string
+                    description: InfraBlockchain Console 유저 ID
+                    example: e176bf2c-7d36-435a-a209-5d3c770fac93
+                nodeId:
+                    type: string
+                    description: InfraBlockchain 노드 ID
+                    example: 609221b9-2af9-434d-8bce-eba7a77a2188
+        StatusResponse:
+            type: object
+            properties:
+                status:
+                    type: string
+                    example: OK
+        Account:
+            type: object
+            properties:
+                account:
+                    type: string
+                    description: InfraBlockchain 계정 명
+                    example: mybpacc
+                privateKey:
+                    type: string
+                    description: InfraBlockchain 개인키
+                    example: PVT_K1_2bfGi9rYsXQSXXTvJbDAPhHLQUojjaNLomdm3cEJ1XTzMqUt3V
+                publicKey:
+                    type: string
+                    description: InfraBlockchain 공개키
+                    example: PUB_K1_6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5BoDq63
+        CreateNodeResponse:
+            type: object
+            required:
+                - status
+                - nodeId
+            description: bpAccount는 BP 노드일 경우에만 표시됩니다.
+            properties:
+                status:
+                    type: string
+                    example: OK
+                nodeId:
+                    type: string
+                    description: InfraBlockchain 노드 ID
+                    example: 609221b9-2af9-434d-8bce-eba7a77a2188
+                bpAccount:
+                    $ref: "#/components/schemas/Account"
+                nodeEndpoints:
+                    type: object
+                    description: 노드의 엔드포인트 목록
+                    $ref: "#/components/schemas/NodeEndpoints"
+                hyperion:
+                    type: object
+                    description: Hyperion에 대한 정보
+                    properties:
+                        hyperionId:
+                            type: string
+                            description: InfraBlockchain Hyperion ID
+                            example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+                        endpoint:
+                            type: string
+                            description: Hyperion endpoint
+                            example: "https://hyperion.infrablockchain.io"
+                explorer:
+                    type: object
+                    description: Explorer 대한 정보
+                    properties:
+                        explorerId:
+                            type: string
+                            description: InfraBlockchain Explorer ID
+                            example: "e176bf2c-7d36-435a-a209-5d3c770fac93"
+                        endpoint:
+                            type: string
+                            description: Explorer endpoint
+                            example: "https://explorer.infrablockchain.io"
+        NodeEndpoints:
+            type: object
+            properties:
+                api:
+                    type: string
+                    description: 노드의 api endpoint
+                    example: "api.infrablockchain.io:8888"
+                peer:
+                    type: string
+                    description: 노드의 peer endpoint
+                    example: "peer.infrablockchain.io:9876"
+                ship:
+                    type: string
+                    description: 노드의 history endpoint
+                    example: "state.infrablockchain.io:8080"
+        NodeResponse:
+            type: object
+            properties:
+                results:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/NodeDetail"
+        NodeDetail:
+            type: object
+            properties:
+                nodeId:
+                    type: string
+                    description: InfraBlockchain 노드 ID
+                    example: e176bf2c-7d36-435a-a209-5d3c770fac93
+                nodeEndpoints:
+                    type: object
+                    description: 노드의 엔드포인트 목록
+                    $ref: "#/components/schemas/NodeEndpoints"
+                chainId:
+                    type: string
+                    example: d33ee9fd7df03be4d23bd1c537ee7807b88c3ab368f62474b8674eab198adb73
+                nodeType:
+                    type: string
+                    default: api
+                    enum:
+                        - api
+                        - bp
+                        - ship
+                    description: 노드의 타입
+                backupSchedule:
+                    type: string
+                    example: 0 0 * * 1
+                    description: 노드의 백업 스케줄
+                instanceType:
+                    type: string
+                    example: t3.large
+                    description: 노드의 서버 인스턴스 타입
+                storage:
+                    type: string
+                    example: "1000 GiB"
+                    description: "노드의 스토리지 용량"
+                nodeConfig:
+                    type: string
+                    example: |-
+                        plugin = eosio::net_plugin
+                        agent-name = eosio
+                        p2p-listen-endpoint = 0.0.0.0:9876
+                        p2p-max-nodes-per-host = 100
+                        allowed-connection = any
+                        max-clients = 25
+                        ...
+                    description: Node의 config.ini 값
+                nodeGenesis:
+                    type: string
+                    example:
+                        {
+                            "initial_timestamp": "2018-12-05T08:55:11.000",
+                            "initial_key": "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+                            "initial_configuration":
+                                {
+                                    "max_block_net_usage": 1048576,
+                                    "target_block_net_usage_pct": 1000,
+                                    "max_transaction_net_usage": 524288,
+                                    "base_per_transaction_net_usage": 12,
+                                    "net_usage_leeway": 500,
+                                    "context_free_discount_net_usage_num": 20,
+                                    "context_free_discount_net_usage_den": 100,
+                                    "max_block_cpu_usage": 100000,
+                                    "target_block_cpu_usage_pct": 500,
+                                    "max_transaction_cpu_usage": 50000,
+                                    "min_transaction_cpu_usage": 100,
+                                    "max_transaction_lifetime": 3600,
+                                    "deferred_trx_expiration_window": 600,
+                                    "max_transaction_delay": 3888000,
+                                    "max_inline_action_size": 4096,
+                                    "max_inline_action_depth": 4,
+                                    "max_authority_depth": 6,
+                                },
+                            "initial_chain_id": "0000000000000000000000000000000000000000000000000000000000000000",
+                        }
+                    description: Chain의 genesis block
+                status:
+                    type: string
+                    example: OK
+                    description: 서버 상태
+                backupLists:
+                    type: array
+                    items:
+                        example: "2016-10-27T17:13:40"
+                    description: 노드의 백업 날짜 목록
+    securitySchemes:
+        api_key:
+            type: apiKey
+            name: x-infra-console-auth
+            in: header
