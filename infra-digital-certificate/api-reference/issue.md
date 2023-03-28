@@ -1,45 +1,55 @@
 # Issue
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-templates" method="get" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+## VC Templates
+
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc" method="get" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-templates" method="post" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc" method="put" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-templates/{id}" method="get" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc{id}" method="get" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-templates/{id}" method="delete" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc{id}" method="post" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-requests" method="get" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc{id}" method="delete" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-requests" method="post" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+## VC Issuance Request
+
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requests" method="get" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-requests/{id}/approve" method="post" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requestss" method="post" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-requests/{id}/reject" method="post" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="get" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vc-requests/{id}" method="delete" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="post" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vcs" method="get" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="delete" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample (1).json" path="/vcs/{id}/revoke" method="post" %}
-[sample (1).json](<../.gitbook/assets/sample (1).json>)
+## TBD
+
+{% swagger src="../.gitbook/assets/sample_2.json" path="/vcs" method="get" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/sample_2.json" path="/vcs/{id}/revoke" method="post" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
