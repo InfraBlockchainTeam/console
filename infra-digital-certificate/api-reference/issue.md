@@ -10,15 +10,15 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc{id}" method="get" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc/{id}" method="get" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc{id}" method="post" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc/{id}" method="post" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc{id}" method="delete" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/templates/vc/{id}" method="delete" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -28,7 +28,7 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requestss" method="post" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requests" method="post" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -46,10 +46,10 @@
 
 ## TBD
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/vcs" method="get" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1vcs" method="get" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/vcs/{id}/revoke" method="post" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/revoke/{id}" method="post" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
