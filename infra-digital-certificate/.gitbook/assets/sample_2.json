@@ -27,7 +27,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/VCTemplatesResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCTemplatesResponseDTO" }] } }
+                }
               }
             }
           },
@@ -53,6 +56,7 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "type": "object",
                   "properties": {
                     "result": { "allOf": [{ "$ref": "#/components/schemas/CreateVCTemplateResponseDTO" }] }
                   }
@@ -88,7 +92,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/VCTemplateResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCTemplateResponseDTO" }] } }
+                }
               }
             }
           },
@@ -178,7 +185,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/IssuedVCsResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/IssuedVCsResponseDTO" }] } }
+                }
               }
             }
           },
@@ -210,7 +220,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/IssuedVCResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/IssuedVCResponseDTO" }] } }
+                }
               }
             }
           },
@@ -283,7 +296,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/VCRequestsResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCRequestsResponseDTO" }] } }
+                }
               }
             }
           },
@@ -311,7 +327,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": { "result": { "$ref": "#/components/schemas/CreateRequestVCIssuanceResponseDTO" } }
+                  "type": "object",
+                  "properties": {
+                    "result": { "allOf": [{ "$ref": "#/components/schemas/CreateRequestVCIssuanceResponseDTO" }] }
+                  }
                 }
               }
             }
@@ -344,7 +363,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/VCRequestResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCRequestResponseDTO" }] } }
+                }
               }
             }
           },
@@ -378,7 +400,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/VCIssuanceResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCIssuanceResponseDTO" }] } }
+                }
               }
             }
           },
@@ -424,7 +449,10 @@
             "description": "The request was successful",
             "content": {
               "application/json": {
-                "schema": { "properties": { "result": { "$ref": "#/components/schemas/CallbackResponseDTO" } } }
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/CallbackResponseDTO" }] } }
+                }
               }
             }
           }
