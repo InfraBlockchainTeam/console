@@ -57,9 +57,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "result": { "allOf": [{ "$ref": "#/components/schemas/CreateVCTemplateResponseDTO" }] }
-                  }
+                  "properties": { "result": { "$ref": "#/components/schemas/CreateVCTemplateResponseDTO" } }
                 }
               }
             }
@@ -94,7 +92,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCTemplateResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VCTemplateResponseDTO" } }
                 }
               }
             }
@@ -187,7 +185,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/IssuedVCsResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/IssuedVCsResponseDTO" } }
                 }
               }
             }
@@ -222,7 +220,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/IssuedVCResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/IssuedVCResponseDTO" } }
                 }
               }
             }
@@ -298,7 +296,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCRequestsResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VCRequestsResponseDTO" } }
                 }
               }
             }
@@ -328,9 +326,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "result": { "allOf": [{ "$ref": "#/components/schemas/CreateRequestVCIssuanceResponseDTO" }] }
-                  }
+                  "properties": { "result": { "$ref": "#/components/schemas/CreateRequestVCIssuanceResponseDTO" } }
                 }
               }
             }
@@ -365,7 +361,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCRequestResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VCRequestResponseDTO" } }
                 }
               }
             }
@@ -402,7 +398,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCIssuanceResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VCIssuanceResponseDTO" } }
                 }
               }
             }
@@ -451,7 +447,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/CallbackResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/CallbackResponseDTO" } }
                 }
               }
             }
