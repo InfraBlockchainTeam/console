@@ -120,7 +120,7 @@
         ],
         "requestBody": {
           "required": true,
-          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateVCTemplateRequestDTO" } } }
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UpdateVCTemplateRequestDTO" } } }
         },
         "responses": {
           "204": { "description": "The request was successful. but there is no content to send" },
@@ -134,7 +134,7 @@
       "delete": {
         "operationId": "VCTemplateController_deleteVCTemplate",
         "summary": "Delete VC Template",
-        "description": "지정한 식별자에 해당하는 VC 미발급된  VC템플릿을 삭제합니다.",
+        "description": "지정한 식별자에 해당하는 VC 미발급된 VC템플릿을 삭제합니다.",
         "parameters": [
           {
             "name": "id",
@@ -538,6 +538,7 @@
         },
         "required": ["key", "type"]
       },
+      "MetaData": { "type": "object", "properties": {} },
       "CreateVCTemplateRequestDTO": {
         "type": "object",
         "properties": {
@@ -573,6 +574,11 @@
             "example": ["email", "alumniOf"],
             "type": "array",
             "items": { "type": "string" }
+          },
+          "metaData": {
+            "description": "해당 템플릿을 적용한 VC 발급을 위해 사용자가 서버에 제출할 메타 데이터",
+            "example": { "name": "max", "weight": "40", "age": "14" },
+            "allOf": [{ "$ref": "#/components/schemas/MetaData" }]
           }
         },
         "required": ["credentialType", "properties"]
@@ -585,14 +591,19 @@
             "description": "VC템플릿 식별자",
             "example": "blob:infra:space:5GMqWAK8W8hSB49nKS7XTwWjjMUb4c2xUGcNh9edb1RWXJHA"
           },
-          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
-          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
           "credentialType": {
             "type": "string",
-            "description": "VC 템플릿을 적용할 VC 타입",
-            "example": "VaccinationCredential",
-            "uniqueItems": true
+            "description": "템플릿에 지정된 VC 타입",
+            "example": "VaccinationCredential"
           },
+          "isModifiable": {
+            "type": "string",
+            "enum": ["registered", "not register"],
+            "description": "VC 발급으로 인한 템플릿 등록 상태",
+            "example": "not register"
+          },
+          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
+          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
           "title": { "type": "string", "description": "VC template title", "example": "VC Template Title" },
           "description": {
             "type": "string",
@@ -619,9 +630,57 @@
             "example": ["email", "alumniOf"],
             "type": "array",
             "items": { "type": "string" }
+          },
+          "metaData": {
+            "description": "해당 템플릿을 적용한 VC 발급을 위해 사용자가 서버에 제출할 메타 데이터",
+            "example": { "name": "max", "weight": "40", "age": "14" },
+            "allOf": [{ "$ref": "#/components/schemas/MetaData" }]
           }
         },
-        "required": ["id", "createdAt", "updatedAt", "credentialType", "properties"]
+        "required": ["id", "credentialType", "isModifiable", "createdAt", "updatedAt", "properties", "metaData"]
+      },
+      "UpdateVCTemplateRequestDTO": {
+        "type": "object",
+        "properties": {
+          "credentialType": {
+            "type": "string",
+            "description": "VC 템플릿을 적용할 VC 타입",
+            "example": "VaccinationCredential",
+            "uniqueItems": true
+          },
+          "title": { "type": "string", "description": "VC 템플릿 제목", "example": "VC Template Title" },
+          "description": {
+            "type": "string",
+            "description": "VC 템플릿 설명",
+            "example": "this is example description of vc template"
+          },
+          "properties": {
+            "description": "템플릿에 설정할 VC Claim의 key,value",
+            "example": [
+              { "key": "id", "type": "string" },
+              {
+                "key": "cliam1",
+                "type": "object",
+                "properties": { "subClaim1": { "type": "number" }, "subClaim2": { "type": "array" } }
+              },
+              { "key": "email", "type": "string" },
+              { "key": "alumniOf", "type": "string" }
+            ],
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/VCTemplateClaim" }
+          },
+          "requiredPropertyKeys": {
+            "description": "설정한 claim중 반드시 포함되어야 할 claim의 키 값",
+            "example": ["email", "alumniOf"],
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "metaData": {
+            "description": "해당 템플릿을 적용한 VC 발급을 위해 사용자가 서버에 제출할 메타 데이터",
+            "example": { "name": "max", "weight": "40", "age": "14" },
+            "allOf": [{ "$ref": "#/components/schemas/MetaData" }]
+          }
+        }
       },
       "IssuedVCsResponseDTO": {
         "type": "object",
@@ -803,7 +862,6 @@
         },
         "required": ["issuanceStatus", "id", "vc"]
       },
-      "MetaData": { "type": "object", "properties": {} },
       "CreateRequestVCIssuanceRequestDTO": {
         "type": "object",
         "properties": {
