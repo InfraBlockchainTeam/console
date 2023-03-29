@@ -29,7 +29,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "allOf": [{ "$ref": "#/components/schemas/VCTemplatesResponseDTO" }] } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VCTemplatesResponseDTO" } }
                 }
               }
             }
