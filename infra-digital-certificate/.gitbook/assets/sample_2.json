@@ -142,13 +142,13 @@
       "get": {
         "operationId": "VCTemplateController_getVCTemplate",
         "summary": "Get VC Template by id",
-        "description": "지정한 식별자에 해당하는 VC템플릿의 상세한 정보를 가져옵니다.",
+        "description": "지정한 식별자에 해당하는 VC 템플릿의 상세한 정보를 가져옵니다.",
         "parameters": [
           {
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "VC템플릿 식별자",
+            "description": "VC 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a",
             "schema": { "type": "string" }
           }
@@ -175,13 +175,13 @@
       "post": {
         "operationId": "VCTemplateController_updateVCTemplate",
         "summary": "Update VC Template",
-        "description": "지정한 식별자에 해당하는 VC 미발급된 VC템플릿의 정보를 수정합니다.",
+        "description": "지정한 식별자에 해당하는 VC 미발급된 VC 템플릿의 정보를 수정합니다.",
         "parameters": [
           {
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "VC템플릿 식별자",
+            "description": "VC 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a",
             "schema": { "type": "string" }
           }
@@ -202,13 +202,13 @@
       "delete": {
         "operationId": "VCTemplateController_deleteVCTemplate",
         "summary": "Delete VC Template",
-        "description": "지정한 식별자에 해당하는 VC 미발급된 VC템플릿을 삭제합니다.",
+        "description": "지정한 식별자에 해당하는 VC 미발급된 VC 템플릿을 삭제합니다.",
         "parameters": [
           {
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "VC템플릿 식별자",
+            "description": "VC 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a",
             "schema": { "type": "string" }
           }
@@ -233,7 +233,7 @@
             "name": "search",
             "required": false,
             "in": "query",
-            "description": "VP 템플릿 검색어. 템플릿 제목이나 설명 그리고 포함된 VC의 타에 대해 검색합니다.",
+            "description": "VP 템플릿 검색어. 템플릿 제목이나 설명 그리고 포함된 VC의 타입에 대해 검색합니다.",
             "schema": { "type": "string" }
           },
           {
@@ -458,6 +458,29 @@
         "tags": ["VC Issuance Request"]
       }
     },
+    "/v1/vcs/requests/callback": {
+      "post": {
+        "operationId": "VCRequestsController_sampleCreateVcIssuanceRequest",
+        "summary": "[sample] Create VC Issuance Request",
+        "description": "holder에 의해 VC 발급 요청이 생성됬을 경우 issuer 서버에서 서비스 서버로 전달하는 콜백함수의 예시입니다. \n\n        전달되는 url은 v1/settings/callback/vc-requests에서 설정합니다.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ExampleCallbackRequestDTO" } } }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/VCIssuanceRequestDTO" } } }
+          },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
+        },
+        "tags": ["VC Issuance Request"]
+      }
+    },
     "/v1/vcs/requests/{id}": {
       "get": {
         "operationId": "VCRequestsController_getVCIssuanceRequest",
@@ -557,7 +580,7 @@
       "get": {
         "operationId": "VCController_getIssuedVCList",
         "summary": "Get Issued VC List",
-        "description": "발급된 VC의 목록을 조회합니다. Holder의 DID(issuer) 혹은 VC 템플릿의 식별값으로 검색하여 가져올 수도 있습니다.\n\n        holder: 자신이 발급받은 VC 목록\n\n        issuer: 자신이 발급한 VC 목록",
+        "description": "발급된 VC의 목록을 조회합니다. Holder의 DID(issuer) 혹은 VC의 타입으로 검색하여 가져올 수도 있습니다.\n\n        holder: 자신이 발급받은 VC 목록\n\n        issuer: 자신이 발급한 VC 목록",
         "parameters": [
           {
             "name": "holderDID",
@@ -568,11 +591,11 @@
             "schema": { "type": "string" }
           },
           {
-            "name": "vcTemplateId",
+            "name": "credentialType",
             "required": false,
             "in": "query",
-            "description": "VC 템플릿의 식별자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
+            "description": "VC 타입",
+            "example": "VaccinationCredential",
             "schema": { "type": "string" }
           }
         ],
@@ -599,7 +622,7 @@
     "/v1/vcs/{id}": {
       "get": {
         "operationId": "VCController_getIssuedVC",
-        "summary": "Get Issued VC List",
+        "summary": "Get Issued VC",
         "description": "지정한 식별자를 통해 발급된 VC의 상세 정보를 조회합니다.\n\n        holder: 자신이 발급받은 VC\n\n        issuer: 자신이 발급한 VC",
         "parameters": [
           {
@@ -682,7 +705,7 @@
             "name": "holderDID",
             "required": false,
             "in": "query",
-            "description": "Holder(VC 제출 대상자)의 DID",
+            "description": "Holder(VP 제출 대상자)의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH",
             "schema": { "type": "string" }
           }
@@ -759,7 +782,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "$ref": "#/components/schemas/VPRequestDTO" } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VPRequestResponseDTO" } }
                 }
               }
             }
@@ -772,9 +795,9 @@
         "tags": ["VP Submit Request"]
       },
       "post": {
-        "operationId": "VPRequestsController_vcIssuanceResponse",
+        "operationId": "VPRequestsController_vpSubmitAndVerify",
         "summary": "Submit/Reject VP",
-        "description": "holder: 지정된 VP 제출 요청 식별자에 해당하는 VP를 생성, 제출 혹은 거절 합니다.",
+        "description": "지정된 VP 제출 요청 식별자에 해당하는 응답 혹은 응답 저장입니다.\n\n            holder: (동기/비동기 API 응답)VP를 생성, 제출 혹은 거절 합니다.\n\n            verifier: (동기 QR) holder VP 제출에 대한 결과 반환 및 VP 검증을 요청합니다.\n            ",
         "parameters": [
           {
             "name": "id",
@@ -796,7 +819,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "result": { "$ref": "#/components/schemas/VCIssuanceResponseDTO" } }
+                  "properties": { "result": { "$ref": "#/components/schemas/VPSubmitResponseDTO" } }
                 }
               }
             }
@@ -832,26 +855,54 @@
         "tags": ["VP Submit Request"]
       }
     },
+    "/v1/vps/requests/callback": {
+      "post": {
+        "operationId": "VPRequestsController_sampleVPSubmitResponseCallback",
+        "summary": "[sample] VP Submit Response Callback",
+        "description": "holder가 API 비동기 VP 제출을 한 경우, verify 서버에서 서비스 서버로 전달하는 콜백함수의 예시입니다. \n\n        전달되는 url은 v1/settings/callback/vp-submits에서 설정합니다.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/VPSubmitResponseDTO" } } }
+        },
+        "responses": {
+          "204": { "description": "The request was successful. but there is no content to send" },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
+        },
+        "tags": ["VP Submit Request"]
+      }
+    },
     "/v1/vps": {
       "get": {
-        "operationId": "VPController_getIssuedVCList",
-        "summary": "Get Issued VC List",
-        "description": "발급된 VC의 목록을 조회합니다. Holder의 DID(issuer) 혹은 VC 템플릿의 식별값으로 검색하여 가져올 수도 있습니다.\n\n        holder: 자신이 발급받은 VC 목록\n\n        issuer: 자신이 발급한 VC 목록",
+        "operationId": "VPController_getSubmittedVPList",
+        "summary": "Get Submitted VP List",
+        "description": "VP 검증 기록의 목록을 가져옵니다. holder(검증 대상자)의 DID, 검증결과 그리고 제출(검증/생성)날짜로 검색하여 가져올 수도 있습니다. \n\n        holder: 자신이 제출한 VP 목록\n\n        verifier: 자신이 검증(제출요청한) VP 목록",
         "parameters": [
           {
             "name": "holderDID",
             "required": false,
             "in": "query",
-            "description": "VC holder의 DID",
+            "description": "Holder의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH",
             "schema": { "type": "string" }
           },
           {
-            "name": "vcTemplateId",
+            "name": "verifyResult",
             "required": false,
             "in": "query",
-            "description": "VC 템플릿의 식별자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
+            "description": "검증결과",
+            "example": "true",
+            "schema": { "type": "boolean" }
+          },
+          {
+            "name": "createdAt",
+            "required": false,
+            "in": "query",
+            "description": "검증/제출/생성 일자",
+            "example": "2023-01-23",
             "schema": { "type": "string" }
           }
         ],
@@ -878,14 +929,14 @@
     "/v1/vps/{id}": {
       "get": {
         "operationId": "VPController_getIssuedVC",
-        "summary": "Get Issued VC List",
-        "description": "지정한 식별자를 통해 발급된 VC의 상세 정보를 조회합니다.\n\n        holder: 자신이 발급받은 VC\n\n        issuer: 자신이 발급한 VC",
+        "summary": "Get Submitted VP",
+        "description": "지정한 식별자를 통해 VP 제출 및 검증 기록의 상세 정보를 조회합니다.\n\n        holder: 자신이 제출한 VP\n\n        verifier: 자신이 검증(제출요청한) VP",
         "parameters": [
           {
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "발급된 VC의 식별자",
+            "description": "VP의 식별자",
             "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
             "schema": { "type": "string" }
           }
@@ -902,31 +953,6 @@
               }
             }
           },
-          "400": { "description": "The request is not valid" },
-          "401": { "description": "Authentication failed" },
-          "403": { "description": "The server understands the request but refuses to authorize it." },
-          "500": { "description": "An unexpected error occurred inside the server" }
-        },
-        "tags": ["VPS"]
-      }
-    },
-    "/v1/vps/revoke/{id}": {
-      "post": {
-        "operationId": "VPController_revokeIssuedVC",
-        "summary": "Revoke Issued VC",
-        "description": "issuer: 지정한 식별자에 해당하는 VC를 폐기(revoke) 합니다.",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "발급된 VC의 식별자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "204": { "description": "The request was successful. but there is no content to send" },
           "400": { "description": "The request is not valid" },
           "401": { "description": "Authentication failed" },
           "403": { "description": "The server understands the request but refuses to authorize it." },
@@ -1004,11 +1030,13 @@
       "VCTemplatesDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "vcTemplateId": {
             "type": "string",
-            "description": "VC템플릿 식별자",
+            "description": "VC 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
+          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
+          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
           "credentialType": {
             "type": "string",
             "description": "템플릿에 지정된 VC 타입",
@@ -1016,7 +1044,7 @@
           },
           "isModifiable": { "type": "boolean", "description": "템플릿 수정 가능 여부(VC 발급 여부)", "example": true }
         },
-        "required": ["id", "credentialType", "isModifiable"]
+        "required": ["vcTemplateId", "createdAt", "updatedAt", "credentialType", "isModifiable"]
       },
       "VCTemplatesResponseDTO": {
         "type": "object",
@@ -1025,9 +1053,11 @@
             "description": "VC 템플릿의 목록",
             "example": [
               {
-                "id": "849e1786-b4e9-407e-8d0d-86777770af8a",
+                "vcTemplateId": "849e1786-b4e9-407e-8d0d-86777770af8a",
                 "credentialType": "VaccinationCredential",
-                "isModifiable": true
+                "isModifiable": true,
+                "createdAt": "2023-03-27T23:50:40.465Z",
+                "updatedAt": "2023-03-27T23:50:40.465Z"
               }
             ],
             "type": "array",
@@ -1039,19 +1069,24 @@
       "CreateVCTemplateResponseDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "vcTemplateId": {
             "type": "string",
-            "description": "VC템플릿 식별자",
+            "description": "VC 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           }
         },
-        "required": ["id"]
+        "required": ["vcTemplateId"]
       },
       "MetaDataTypeDTO": {
         "type": "object",
         "properties": {
           "key": { "type": "string", "description": "발급할 VC의 Claim key 값", "example": "email" },
-          "type": { "type": "string", "description": "발급할 VC의 Claim key의 타입", "example": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["string", "number", "boolean", "array", "object"],
+            "description": "발급할 VC의 Claim key의 타입",
+            "example": "string"
+          },
           "properties": {
             "description": "object type에 대한 claim key, type 지정",
             "example": { "properties": { "a": { "type": "string" } } },
@@ -1103,7 +1138,7 @@
               { "key": "weight", "type": "number" }
             ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": { "$ref": "#/components/schemas/MetaDataTypeDTO" }
           }
         },
         "required": ["credentialType", "properties"]
@@ -1111,19 +1146,19 @@
       "VCTemplateResponseDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "vcTemplateId": {
             "type": "string",
-            "description": "VC템플릿 식별자",
+            "description": "VC 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
+          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
+          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
           "credentialType": {
             "type": "string",
             "description": "템플릿에 지정된 VC 타입",
             "example": "VaccinationCredential"
           },
           "isModifiable": { "type": "boolean", "description": "템플릿 수정 가능 여부(VC 발급 여부)", "example": true },
-          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
-          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
           "title": { "type": "string", "description": "VC template title", "example": "VC Template Title" },
           "description": {
             "type": "string",
@@ -1159,10 +1194,19 @@
               { "key": "ci", "type": "number" }
             ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": { "$ref": "#/components/schemas/MetaDataTypeDTO" }
           }
         },
-        "required": ["id", "credentialType", "isModifiable", "createdAt", "updatedAt", "properties", "metaDataType"]
+        "required": [
+          "vcTemplateId",
+          "createdAt",
+          "updatedAt",
+          "credentialType",
+          "isModifiable",
+          "properties",
+          "requiredPropertyKeys",
+          "metaDataType"
+        ]
       },
       "UpdateVCTemplateRequestDTO": {
         "type": "object",
@@ -1207,15 +1251,14 @@
               { "key": "weight", "type": "number" }
             ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": { "$ref": "#/components/schemas/MetaDataTypeDTO" }
           }
-        },
-        "required": ["properties"]
+        }
       },
       "VPTemplatesDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "vpTemplateId": {
             "type": "string",
             "description": "VP 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
@@ -1224,7 +1267,7 @@
           "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
           "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" }
         },
-        "required": ["id", "presentationType", "createdAt", "updatedAt"]
+        "required": ["vpTemplateId", "presentationType", "createdAt", "updatedAt"]
       },
       "VPTemplatesResponseDTO": {
         "type": "object",
@@ -1233,7 +1276,7 @@
             "description": "VC 템플릿의 목록",
             "example": [
               {
-                "id": "849e1786-b4e9-407e-8d0d-86777770af8a",
+                "vpTemplateId": "849e1786-b4e9-407e-8d0d-86777770af8a",
                 "presentationType": "VaccinationPresentation",
                 "createdAt": "2023-03-27T23:50:40.465Z",
                 "updatedAt": "2023-03-27T23:50:40.465Z"
@@ -1248,13 +1291,30 @@
       "CreateVPTemplateResponseDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "vpTemplateId": {
             "type": "string",
             "description": "VP 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           }
         },
-        "required": ["id"]
+        "required": ["vpTemplateId"]
+      },
+      "CredentialsToPresent": {
+        "type": "object",
+        "properties": {
+          "credentialType": {
+            "type": "string",
+            "description": "VP 제출시 포함되어야 할 VC 타입",
+            "example": "VaccinationCredential"
+          },
+          "properites": {
+            "description": "VP 제출시 포함된 VC의 공개 항목",
+            "example": ["address", "name", "age"],
+            "type": "array",
+            "items": { "type": "array" }
+          }
+        },
+        "required": ["credentialType"]
       },
       "CreateVPTemplateRequestDTO": {
         "type": "object",
@@ -1272,7 +1332,7 @@
               { "credentialType": "VaccinationCredential" }
             ],
             "type": "array",
-            "items": { "type": "array" }
+            "items": { "$ref": "#/components/schemas/CredentialsToPresent" }
           }
         },
         "required": ["presentationType", "credentialsToPresent"]
@@ -1280,7 +1340,7 @@
       "VPTemplateResponseDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "vpTemplateId": {
             "type": "string",
             "description": "VP 템플릿 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
@@ -1300,10 +1360,10 @@
               { "credentialType": "VaccinationCredential" }
             ],
             "type": "array",
-            "items": { "type": "array" }
+            "items": { "$ref": "#/components/schemas/CredentialsToPresent" }
           }
         },
-        "required": ["id", "presentationType", "createdAt", "updatedAt"]
+        "required": ["vpTemplateId", "presentationType", "createdAt", "updatedAt", "credentialsToPresent"]
       },
       "UpdateVPTemplateRequestDTO": {
         "type": "object",
@@ -1321,7 +1381,7 @@
               { "credentialType": "VaccinationCredential" }
             ],
             "type": "array",
-            "items": { "type": "array" }
+            "items": { "$ref": "#/components/schemas/CredentialsToPresent" }
           }
         }
       },
@@ -1344,7 +1404,7 @@
             "description": "Holder(VC 발급 요청자)의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
           },
-          "templateId": {
+          "vcTemplateId": {
             "type": "string",
             "description": "VC 템플릿의 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
@@ -1352,7 +1412,7 @@
           "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
           "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" }
         },
-        "required": ["issuanceStatus", "id", "holderDID", "templateId", "createdAt", "updatedAt"]
+        "required": ["issuanceStatus", "id", "holderDID", "vcTemplateId", "createdAt", "updatedAt"]
       },
       "VCRequestsResponseDTO": {
         "type": "object",
@@ -1365,7 +1425,7 @@
                 "issuanceStatus": "Pending",
                 "createdAt": "2023-03-27T23:50:40.465Z",
                 "updatedAt": "2023-03-27T23:50:40.465Z",
-                "templateId": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH",
+                "vcTemplateId": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH",
                 "holderDID": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
               }
             ],
@@ -1415,7 +1475,7 @@
             "allOf": [{ "$ref": "#/components/schemas/VCjsonld" }]
           }
         },
-        "required": ["issuanceStatus", "id", "vc"]
+        "required": ["issuanceStatus", "id"]
       },
       "MetaDataDTO": { "type": "object", "properties": {} },
       "CreateRequestVCIssuanceRequestDTO": {
@@ -1432,71 +1492,28 @@
             "allOf": [{ "$ref": "#/components/schemas/MetaDataDTO" }]
           }
         },
-        "required": ["vcTemplateId", "metaData"]
+        "required": ["vcTemplateId"]
       },
-      "VCRequestResponseDTO": {
+      "ExampleCallbackRequestDTO": {
         "type": "object",
         "properties": {
-          "issuanceStatus": {
+          "vcTemplateId": {
             "type": "string",
-            "enum": ["Approved", "Rejected", "Pending"],
-            "example": "Approved",
-            "description": "요청에 대한 서비스 서버 처리 상태"
-          },
-          "id": {
-            "type": "string",
-            "description": "VC 발급 요청 식별자",
+            "description": "VC 템플릿의 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "metaData": {
+            "description": "서비스가 지정한 VC 발급을 위한 사용자 제출 데이터",
+            "example": { "name": "max", "ci": "12834792343" },
+            "allOf": [{ "$ref": "#/components/schemas/MetaDataDTO" }]
           },
           "holderDID": {
             "type": "string",
             "description": "Holder(VC 발급 요청자)의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
-          },
-          "templateId": {
-            "type": "string",
-            "description": "VC 템플릿의 식별자",
-            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
-          },
-          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
-          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
-          "credentialType": {
-            "type": "string",
-            "description": "발급요청한 VC 타입",
-            "example": "VaccinationCredential",
-            "uniqueItems": true
-          },
-          "metaDataTypes": {
-            "description": "해당 템플릿을 적용한 VC 발급을 위해 사용자가 서버에 제출할 메타 데이터 타입 ",
-            "example": [
-              { "key": "name", "type": "string" },
-              { "key": "weight", "type": "number" }
-            ],
-            "type": "array",
-            "items": { "type": "string" }
           }
         },
-        "required": [
-          "issuanceStatus",
-          "id",
-          "holderDID",
-          "templateId",
-          "createdAt",
-          "updatedAt",
-          "credentialType",
-          "metaDataTypes"
-        ]
-      },
-      "VCIssuanceResponseDTO": {
-        "type": "object",
-        "properties": {
-          "issuedVCId": {
-            "type": "object",
-            "description": "발급수락 한 경우 발급된 VC의 식별자",
-            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH   // or null if reject"
-          }
-        },
-        "required": ["issuedVCId"]
+        "required": ["vcTemplateId", "holderDID"]
       },
       "VCIssuanceRequestDTO": {
         "type": "object",
@@ -1519,6 +1536,106 @@
         },
         "required": ["issuanceStatus", "vcSubject"]
       },
+      "VCRequestResponseDTO": {
+        "type": "object",
+        "properties": {
+          "issuanceStatus": {
+            "type": "string",
+            "enum": ["Approved", "Rejected", "Pending"],
+            "example": "Approved",
+            "description": "요청에 대한 서비스 서버 처리 상태"
+          },
+          "id": {
+            "type": "string",
+            "description": "VC 발급 요청 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "holderDID": {
+            "type": "string",
+            "description": "Holder(VC 발급 요청자)의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          },
+          "vcTemplateId": {
+            "type": "string",
+            "description": "VC 템플릿의 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
+          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
+          "credentialType": {
+            "type": "string",
+            "description": "발급요청한 VC 타입",
+            "example": "VaccinationCredential",
+            "uniqueItems": true
+          },
+          "metaDataTypes": {
+            "description": "해당 템플릿을 적용한 VC 발급을 위해 사용자가 서버에 제출할 메타 데이터 타입 ",
+            "example": [
+              { "key": "name", "type": "string" },
+              { "key": "weight", "type": "number" },
+              { "key": "ci", "type": "string" }
+            ],
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "metaData": {
+            "description": "서비스가 지정한 VC 발급을 위한 사용자 제출 데이터",
+            "example": { "name": "max", "ci": "12834792343", "wheigt": 24 },
+            "allOf": [{ "$ref": "#/components/schemas/MetaDataDTO" }]
+          }
+        },
+        "required": [
+          "issuanceStatus",
+          "id",
+          "holderDID",
+          "vcTemplateId",
+          "createdAt",
+          "updatedAt",
+          "credentialType",
+          "metaDataTypes",
+          "metaData"
+        ]
+      },
+      "VCIssuanceResponseDTO": {
+        "type": "object",
+        "properties": {
+          "issuedVCId": {
+            "type": "object",
+            "description": "발급수락 한 경우 발급된 VC의 식별자",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH   // or null if reject"
+          }
+        },
+        "required": ["issuedVCId"]
+      },
+      "IssuedVCDTO": {
+        "type": "object",
+        "properties": {
+          "holderDID": {
+            "type": "string",
+            "description": "VC holder의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          },
+          "vcId": {
+            "type": "string",
+            "description": "VC 식별자",
+            "example": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U"
+          },
+          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
+          "credentialType": { "type": "string", "description": "발급된 VC 타입", "example": "VaccinationCredential" },
+          "vcRequestId": {
+            "type": "string",
+            "description": "VC 발급 요청 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "issuanceStatus": {
+            "type": "string",
+            "description": "VC의 발급 상태",
+            "example": "issued",
+            "enum": ["issued", "revoked"]
+          }
+        },
+        "required": ["holderDID", "vcId", "createdAt", "credentialType", "vcRequestId", "issuanceStatus"]
+      },
       "IssuedVCsResponseDTO": {
         "type": "object",
         "properties": {
@@ -1527,15 +1644,23 @@
             "example": [
               {
                 "createdAt": "2023-03-27T23:50:40.465Z",
-                "id": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
+                "vcId": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
                 "holderDID": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
                 "credentialType": "VaccinationCredential",
                 "vcRequestId": "849e1786-b4e9-407e-8d0d-86777770af8a",
                 "issuanceStatus": "issued"
+              },
+              {
+                "createdAt": "2023-03-24T23:50:40.465Z",
+                "vcId": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSREV9",
+                "holderDID": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
+                "credentialType": "VaccinationCredential",
+                "vcRequestId": "849e1786-b4e9-407e-8d0d-86777770aaa3",
+                "issuanceStatus": "revoked"
               }
             ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": { "$ref": "#/components/schemas/IssuedVCDTO" }
           }
         },
         "required": ["issuedVCs"]
@@ -1548,10 +1673,10 @@
             "description": "VC holder의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
           },
-          "id": {
+          "vcId": {
             "type": "string",
             "description": "VC 식별자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF"
+            "example": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U"
           },
           "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
           "credentialType": { "type": "string", "description": "발급된 VC 타입", "example": "VaccinationCredential" },
@@ -1560,7 +1685,12 @@
             "description": "VC 발급 요청 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
-          "issuanceStatus": { "type": "string", "description": "VC의 발급 상태", "example": "issued" },
+          "issuanceStatus": {
+            "type": "string",
+            "description": "VC의 발급 상태",
+            "example": "issued",
+            "enum": ["issued", "revoked"]
+          },
           "vc": {
             "description": "발급된 VC",
             "example": {
@@ -1568,7 +1698,7 @@
               "id": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U",
               "type": ["VerifiableCredential", "VaccinationCredential"],
               "credentialSubject": {
-                "id": "did:infra:space:5FswCxP6KdqBX9Xt4tHzs8fExN3ttUd5PNhXLaxbYPhVAENc",
+                "id": "did:infra:space:5CfVpNJWhHeeb8EWhwKzUk3phDNtUNigCAjnSBYD7S6MnD2d",
                 "테스트": "123",
                 "alumniOf": "Example University",
                 "email": "test@test.com"
@@ -1586,7 +1716,7 @@
             "allOf": [{ "$ref": "#/components/schemas/VCjsonld" }]
           }
         },
-        "required": ["createdAt", "credentialType", "vcRequestId", "issuanceStatus", "vc"]
+        "required": ["holderDID", "vcId", "createdAt", "credentialType", "vcRequestId", "issuanceStatus", "vc"]
       },
       "VPRequestDTO": {
         "type": "object",
@@ -1597,25 +1727,30 @@
             "example": "Submitted",
             "description": "요청에 대한 홀더의 제출 상태"
           },
-          "id": {
+          "requestId": {
             "type": "string",
-            "description": "VC 발급 요청 식별자",
+            "description": "VP 제출 요청 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
           "holderDID": {
             "type": "string",
-            "description": "Holder(VC 제출 대상자)의 DID",
+            "description": "Holder(VP 제출 대상자)의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
           },
-          "templateId": {
+          "vpTemplateId": {
             "type": "string",
             "description": "VP 템플릿의 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
           "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
-          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" }
+          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
+          "verifierDID": {
+            "type": "string",
+            "description": "Verifier(VP 제출 요청차)의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          }
         },
-        "required": ["submitStatus", "id", "holderDID", "templateId", "createdAt", "updatedAt"]
+        "required": ["submitStatus", "requestId", "holderDID", "vpTemplateId", "createdAt", "updatedAt", "verifierDID"]
       },
       "VPRequestsResponseDTO": {
         "type": "object",
@@ -1624,12 +1759,13 @@
             "description": "제출 요청한(된) VP 제출 요청 리스트",
             "example": [
               {
-                "id": "849e1786-b4e9-407e-8d0d-86777770af8a",
+                "requestId": "849e1786-b4e9-407e-8d0d-86777770af8a",
                 "submitStatus": "Pending",
                 "createdAt": "2023-03-27T23:50:40.465Z",
                 "updatedAt": "2023-03-27T23:50:40.465Z",
-                "templateId": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH",
-                "holderDID": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+                "vpTemplateId": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sVPT",
+                "holderDID": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sHOL",
+                "verifierDID": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sVER"
               }
             ],
             "type": "array",
@@ -1648,9 +1784,9 @@
             "example": "Submitted",
             "description": "요청에 대한 홀더의 제출 상태"
           },
-          "id": {
+          "requestId": {
             "type": "string",
-            "description": "VC 발급 요청 식별자",
+            "description": "VP 제출 요청 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
           "vp": {
@@ -1696,7 +1832,7 @@
             "allOf": [{ "$ref": "#/components/schemas/VPjsonld" }]
           }
         },
-        "required": ["submitStatus", "id", "vp"]
+        "required": ["submitStatus", "requestId"]
       },
       "CreateRequestVPIssuanceRequestDTO": {
         "type": "object",
@@ -1707,7 +1843,7 @@
             "description": "Holder(VC 제출 대상자)의 DID",
             "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
           },
-          "templateId": {
+          "vpTemplateId": {
             "type": "string",
             "description": "VP 템플릿의 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
@@ -1718,73 +1854,139 @@
             "example": "SOME_CHALLENGE_VALUE"
           }
         },
-        "required": ["isSync", "holderDID", "templateId", "challenge"]
+        "required": ["isSync", "holderDID", "vpTemplateId", "challenge"]
+      },
+      "VPRequestResponseDTO": {
+        "type": "object",
+        "properties": {
+          "submitStatus": {
+            "type": "string",
+            "enum": ["Submitted", "Rejected", "Pending"],
+            "example": "Submitted",
+            "description": "요청에 대한 홀더의 제출 상태"
+          },
+          "requestId": {
+            "type": "string",
+            "description": "VP 제출 요청 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "holderDID": {
+            "type": "string",
+            "description": "Holder(VP 제출 대상자)의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          },
+          "vpTemplateId": {
+            "type": "string",
+            "description": "VP 템플릿의 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
+          "updatedAt": { "type": "string", "description": "마지막 수정 일시", "example": "2023-03-27T23:50:40.465Z" },
+          "verifierDID": {
+            "type": "string",
+            "description": "Verifier(VP 제출 요청차)의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          },
+          "presentationType": { "type": "string", "description": "VP 타입", "example": "VaccinationPresentation" },
+          "credentialsToPresent": {
+            "description": "VP 제출시 포함되어야 할 VC 타입과 공개 항목",
+            "example": [
+              { "credentialType": "DriverLicense", "properites": ["address", "name", "age"] },
+              { "credentialType": "VaccinationCredential" }
+            ],
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/CredentialsToPresent" }
+          },
+          "challenge": {
+            "type": "string",
+            "description": "holder 가 VP 생성시 포함할 challenge 검증 값",
+            "example": "SOME_CHALLENGE_VALUE"
+          }
+        },
+        "required": [
+          "submitStatus",
+          "requestId",
+          "holderDID",
+          "vpTemplateId",
+          "createdAt",
+          "updatedAt",
+          "verifierDID",
+          "presentationType",
+          "credentialsToPresent",
+          "challenge"
+        ]
+      },
+      "VPSubmitResponseDTO": {
+        "type": "object",
+        "properties": {
+          "submitStatus": {
+            "type": "string",
+            "enum": ["Submitted", "Rejected", "Pending"],
+            "example": "Submitted",
+            "description": "요청에 대한 홀더의 제출 상태"
+          },
+          "requestId": {
+            "type": "string",
+            "description": "VP 제출 요청 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "vp": {
+            "description": "Holder가 생성하여 제출한 VP",
+            "example": {
+              "@context": ["https://www.w3.org/2018/credentials/v1", "https://www.w3.org/2018/credentials/examples/v1"],
+              "verifiableCredential": [
+                {
+                  "@context": ["https://www.w3.org/2018/credentials/v1", "https://schema.org"],
+                  "id": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U",
+                  "type": ["VerifiableCredential", "VaccinationCredential"],
+                  "credentialSubject": [
+                    {
+                      "id": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv",
+                      "alumniOf": "Example University",
+                      "email": "test@test.com"
+                    }
+                  ],
+                  "issuanceDate": "2023-03-31T06:18:12.024Z",
+                  "proof": {
+                    "type": "Sr25519Signature2020",
+                    "created": "2023-03-31T06:18:12Z",
+                    "verificationMethod": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L#keys-1",
+                    "proofPurpose": "assertionMethod",
+                    "proofValue": "z3ghAy9doGDBgsfvXQnW6EER8KNV5AYhuwBT7B5MWddvQQougnHiVTFqWBeVMMEeKiAXA5izdmNZYNdHEm5FAebS2"
+                  },
+                  "issuer": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L"
+                }
+              ],
+              "id": "http://example.edu/credentials/2803",
+              "type": ["VerifiablePresentation", "CredentialManagerPresentation"],
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2023-03-31T06:18:24Z",
+                "verificationMethod": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv#keys-1",
+                "proofPurpose": "authentication",
+                "challenge": "0xcbf491396cc65b383185b366ecb659f98a1b0be6c142eea6c5f2adee11c2a83f",
+                "domain": "example domain",
+                "proofValue": "z3gXMiYRgq45Pp2nQ33fvVwgxQHUYnNgRwzEW4LC8efi43vjdkNgyYFwwR4kQYuB4QBgcKktYqJZqAi7UMHnHgq1F"
+              },
+              "holder": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv"
+            },
+            "allOf": [{ "$ref": "#/components/schemas/VPjsonld" }]
+          },
+          "verify": { "type": "boolean", "description": "VP 검증 결과", "example": true }
+        },
+        "required": ["submitStatus", "requestId"]
       },
       "VPSubmitRequestDTO": {
         "type": "object",
         "properties": {
-          "issuanceStatus": {
+          "submitStatus": {
             "type": "string",
             "enum": ["Submitted", "Rejected"],
             "description": "발급 상태 값",
             "example": "Submitted"
           },
-          "vcSubject": {
-            "type": "object",
-            "description": "(issuanceStatus === 'Approve')발급할 VC의 Subject",
-            "example": {
-              "id": "did:infra:space:5FswCxP6KdqBX9Xt4tHzs8fExN3ttUd5PNhXLaxbYPhVAENc",
-              "alumniOf": "Example University",
-              "email": "test@test.com"
-            }
-          }
-        },
-        "required": ["issuanceStatus", "vcSubject"]
-      },
-      "IssuedVPsResponseDTO": {
-        "type": "object",
-        "properties": {
-          "issuedVCs": {
-            "description": "발급된 VC 정보",
-            "example": [
-              {
-                "createdAt": "2023-03-27T23:50:40.465Z",
-                "id": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
-                "holderDID": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
-                "credentialType": "VaccinationCredential",
-                "requestId": "849e1786-b4e9-407e-8d0d-86777770af8a",
-                "issuanceStatus": "issued"
-              }
-            ],
-            "type": "array",
-            "items": { "type": "string" }
-          }
-        },
-        "required": ["issuedVCs"]
-      },
-      "SubmitVPResponseDTO": {
-        "type": "object",
-        "properties": {
-          "holderDID": {
-            "type": "string",
-            "description": "VC holder의 DID",
-            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
-          },
-          "id": {
-            "type": "string",
-            "description": "VC 식별자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF"
-          },
-          "createdAt": { "type": "string", "description": "생성일시", "example": "2023-03-27T23:50:40.465Z" },
-          "credentialType": { "type": "string", "description": "발급된 VC 타입", "example": "VaccinationCredential" },
-          "requestId": {
-            "type": "string",
-            "description": "VC 발급 요청 식별자",
-            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
-          },
-          "issuanceStatus": { "type": "string", "description": "VC의 발급 상태", "example": "issued" },
           "vp": {
-            "description": "제출된 VP",
+            "description": "Holder가 생성하여 제출한 VP",
             "example": {
               "@context": ["https://www.w3.org/2018/credentials/v1", "https://www.w3.org/2018/credentials/examples/v1"],
               "verifiableCredential": [
@@ -1826,7 +2028,119 @@
             "allOf": [{ "$ref": "#/components/schemas/VPjsonld" }]
           }
         },
-        "required": ["createdAt", "credentialType", "requestId", "issuanceStatus", "vp"]
+        "required": ["submitStatus"]
+      },
+      "SubmitVPDTO": {
+        "type": "object",
+        "properties": {
+          "vpId": {
+            "type": "string",
+            "description": "VP의 식별자",
+            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF"
+          },
+          "verify": { "type": "boolean", "description": "VP 검증 결과", "example": true },
+          "createdAt": { "type": "string", "description": "생성(제출)일시", "example": "2023-03-27T23:50:40.465Z" },
+          "presentationType": {
+            "type": "string",
+            "description": "VP 타입",
+            "example": "CredentialManagerPresentation"
+          },
+          "vpRequestId": {
+            "type": "string",
+            "description": "VP 제출 요청 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          }
+        },
+        "required": ["vpId", "verify", "createdAt", "presentationType", "vpRequestId"]
+      },
+      "IssuedVPsResponseDTO": {
+        "type": "object",
+        "properties": {
+          "submittedVPs": {
+            "description": "VP 제출 정보 목록",
+            "example": [
+              {
+                "createdAt": "2023-03-27T23:50:40.465Z",
+                "vpId": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF",
+                "presentationType": "CredentialManagerPresentation",
+                "vpRequestId": "849e1786-b4e9-407e-8d0d-86777770af8a",
+                "verify": true
+              }
+            ],
+            "allOf": [{ "$ref": "#/components/schemas/SubmitVPDTO" }]
+          }
+        },
+        "required": ["submittedVPs"]
+      },
+      "SubmitVPResponseDTO": {
+        "type": "object",
+        "properties": {
+          "vpId": {
+            "type": "string",
+            "description": "VP의 식별자",
+            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSdfDF"
+          },
+          "verify": { "type": "boolean", "description": "VP 검증 결과", "example": true },
+          "createdAt": { "type": "string", "description": "생성(제출)일시", "example": "2023-03-27T23:50:40.465Z" },
+          "presentationType": {
+            "type": "string",
+            "description": "VP 타입",
+            "example": "CredentialManagerPresentation"
+          },
+          "vpRequestId": {
+            "type": "string",
+            "description": "VP 제출 요청 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "vp": {
+            "description": "제출된 VP",
+            "example": {
+              "@context": ["https://www.w3.org/2018/credentials/v1", "https://www.w3.org/2018/credentials/examples/v1"],
+              "verifiableCredential": [
+                {
+                  "@context": ["https://www.w3.org/2018/credentials/v1", "https://schema.org"],
+                  "id": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U",
+                  "type": ["VerifiableCredential", "VaccinationCredential"],
+                  "credentialSubject": [
+                    {
+                      "id": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv",
+                      "alumniOf": "Example University",
+                      "email": "test@test.com"
+                    }
+                  ],
+                  "issuanceDate": "2023-03-31T06:18:12.024Z",
+                  "proof": {
+                    "type": "Sr25519Signature2020",
+                    "created": "2023-03-31T06:18:12Z",
+                    "verificationMethod": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L#keys-1",
+                    "proofPurpose": "assertionMethod",
+                    "proofValue": "z3ghAy9doGDBgsfvXQnW6EER8KNV5AYhuwBT7B5MWddvQQougnHiVTFqWBeVMMEeKiAXA5izdmNZYNdHEm5FAebS2"
+                  },
+                  "issuer": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L"
+                }
+              ],
+              "id": "http://example.edu/credentials/2803",
+              "type": ["VerifiablePresentation", "CredentialManagerPresentation"],
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2023-03-31T06:18:24Z",
+                "verificationMethod": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv#keys-1",
+                "proofPurpose": "authentication",
+                "challenge": "0xcbf491396cc65b383185b366ecb659f98a1b0be6c142eea6c5f2adee11c2a83f",
+                "domain": "example domain",
+                "proofValue": "z3gXMiYRgq45Pp2nQ33fvVwgxQHUYnNgRwzEW4LC8efi43vjdkNgyYFwwR4kQYuB4QBgcKktYqJZqAi7UMHnHgq1F"
+              },
+              "holder": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv"
+            },
+            "allOf": [{ "$ref": "#/components/schemas/VPjsonld" }]
+          },
+          "verifierDID": {
+            "type": "string",
+            "description": "Verifier(VP 제출 요청차)의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          }
+        },
+        "required": ["vpId", "verify", "createdAt", "presentationType", "vpRequestId", "vp", "verifierDID"]
       }
     }
   }

@@ -44,7 +44,7 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-## (TBD)VPS
+## VPS
 
 {% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vps" method="get" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
@@ -54,16 +54,16 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vps/verification" method="post" %}
-[sample_2.json](../.gitbook/assets/sample_2.json)
-{% endswagger %}
-
-## (TBD) Callbacks
+## Callbacks
 
 {% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/callbacks/vp-submits" method="get" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
 {% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/callbacks/vp-submits" method="post" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vps/requests/callback" method="post" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}

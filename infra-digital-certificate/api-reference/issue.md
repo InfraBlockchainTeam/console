@@ -67,3 +67,7 @@
 {% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/callbacks/vc-requests" method="post" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
+
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/callback" method="post" %}
+[sample_2.json](../.gitbook/assets/sample_2.json)
+{% endswagger %}
