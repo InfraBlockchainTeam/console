@@ -14,8 +14,6 @@
 
 - [API reference](api-reference/README.md)
 
-  - [Auth](api-reference/auth.md)
-
   - [Issue](api-reference/issue.md)
 
   - [Verify](api-reference/verify.md)
