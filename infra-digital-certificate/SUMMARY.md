@@ -2,22 +2,66 @@
 
 - [Introduction](README.md)
 
-- [Get Started](get-started/README.md)
+  - [DID](introduction/did.md)
 
-  - [Console](get-started/console.md)
+  - [VC](introduction/vc.md)
 
-  - [SDK](get-started/sdk.md)
+  - [VP](introduction/vp.md)
 
-- [Tutorial](tutorial/README.md)
+    - [InfraDID Communication Protocol(ICP)](introduction/icp.md)
 
-  - [DID Token](tutorial/did-token.md)
+  - [DID Token](introduction/did-token.md)
 
-- [API reference](api-reference/README.md)
+- [Get Started](get-started.md)
 
-  - [Issue](api-reference/issue.md)
+  - [회원가입](get-started/signin.md)
 
-  - [Verify](api-reference/verify.md)
+  - [Cert 서비스 시작](get-started/start-cert.md)
 
-- [SDK reference](sdk-reference.md)
+    - [키 생성](get-started/start-cert/generate-key.md)
 
-- [Troubleshooting](troubleshooting.md)
+    - [조직 등록](get-started/start-cert/register-org.md)
+
+    - [인스턴스 생성](get-started/start-cert/instance.md)
+
+  - [서비스 연동 및 설정](get-started/setting.md)
+
+    - [Callback URL 설정](get-started/setting/callbacks.md)
+
+    - [VC/VP 템플릿 설정](get-started/setting/templates.md)
+
+  - [VC 발급](get-started/issue-vc.md)
+
+    - [발급 요청](get-started/issue-vc/request.md)
+
+    - [발급 처리](get-started/issue-vc/issue.md)
+
+    - [발급 내역 조회](get-started/issue-vc/history.md)
+
+    - [VC 폐기](get-started/issue-vc/revoke.md)
+
+  - [VP 검증](get-started/verify-vp.md)
+
+    - [DID 연결](get-started/verify-vp/connection.md)
+
+    - [VP 제출](get-started/verify-vp/submit.md)
+
+    - [VP 검증](get-started/verify-vp/verify.md)
+
+    - [VP 검증 이력 조회](get-started/verify-vp/history.md)
+
+  - [SSO 로그인 구축](get-started/sso.md)
+
+- [Guide](guide.md)
+
+  - [Console](guide/console.md)
+
+  - [API reference](guide/api-reference.md)
+
+    - [Issue API](guide/api-reference/issue.md)
+
+    - [Verify API](guide/api-reference/verify.md)
+
+  - [SDK reference](guide/sdk-reference.md)
+
+  - [Troubleshooting](guide/troubleshooting.md)
