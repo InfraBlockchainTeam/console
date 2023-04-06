@@ -1,6 +1,36 @@
 {
   "openapi": "3.0.0",
   "paths": {
+    "/": {
+      "get": {
+        "operationId": "AppController_getHello",
+        "summary": "Health Check",
+        "description": "cert 서버의 health check 입니다.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": { "application/json": { "schema": { "type": "string", "example": "Hello World!" } } }
+          }
+        },
+        "tags": ["Health Check"]
+      }
+    },
+    "/sample": {
+      "get": {
+        "operationId": "AppController_sampleToken",
+        "summary": "[sample] DID-token sample",
+        "description": "cert 서버에 제출할 DID token 포맷 확인용입니다. ",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/DIDToken" } } }
+          }
+        },
+        "tags": ["sample Token"]
+      }
+    },
     "/v1/settings/callbacks/vc-requests": {
       "get": {
         "operationId": "VCCallbackController_getCallback",
@@ -18,9 +48,14 @@
                 }
               }
             }
-          }
+          },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["Callbacks"]
+        "tags": ["Callbacks"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "patch": {
         "operationId": "VCCallbackController_updateCallback",
@@ -31,8 +66,15 @@
           "required": true,
           "content": { "application/json": { "schema": { "$ref": "#/components/schemas/VCCallbackRequestDTO" } } }
         },
-        "responses": { "204": { "description": "The request was successful. but there is no content to send" } },
-        "tags": ["Callbacks"]
+        "responses": {
+          "204": { "description": "The request was successful. but there is no content to send" },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
+        },
+        "tags": ["Callbacks"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/settings/callbacks/vp-submits": {
@@ -52,9 +94,14 @@
                 }
               }
             }
-          }
+          },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["Callbacks"]
+        "tags": ["Callbacks"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "patch": {
         "operationId": "VPCallbackController_updateCallback",
@@ -65,8 +112,15 @@
           "required": true,
           "content": { "application/json": { "schema": { "$ref": "#/components/schemas/VPCallbackRequestDTO" } } }
         },
-        "responses": { "204": { "description": "The request was successful. but there is no content to send" } },
-        "tags": ["Callbacks"]
+        "responses": {
+          "204": { "description": "The request was successful. but there is no content to send" },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
+        },
+        "tags": ["Callbacks"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/settings/templates/vcs": {
@@ -107,7 +161,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"]
+        "tags": ["VC templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
         "operationId": "VCTemplateController_createVCTemplates",
@@ -135,7 +190,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"]
+        "tags": ["VC templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/settings/templates/vcs/{id}": {
@@ -170,7 +226,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"]
+        "tags": ["VC templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "patch": {
         "operationId": "VCTemplateController_updateVCTemplate",
@@ -197,7 +254,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"]
+        "tags": ["VC templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "delete": {
         "operationId": "VCTemplateController_deleteVCTemplate",
@@ -220,7 +278,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"]
+        "tags": ["VC templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/settings/templates/vps": {
@@ -261,7 +320,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"]
+        "tags": ["VP templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
         "operationId": "VPTemplateController_createVCTemplates",
@@ -289,7 +349,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"]
+        "tags": ["VP templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/settings/templates/vps/{id}": {
@@ -324,7 +385,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"]
+        "tags": ["VP templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "patch": {
         "operationId": "VPTemplateController_updateVCTemplate",
@@ -351,7 +413,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"]
+        "tags": ["VP templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "delete": {
         "operationId": "VPTemplateController_deleteVPTemplate",
@@ -374,7 +437,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"]
+        "tags": ["VP templates"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs/requests/callback": {
@@ -397,7 +461,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC Issuance Request"]
+        "tags": ["VC Issuance Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs/requests": {
@@ -448,7 +513,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC Issuance Request"]
+        "tags": ["VC Issuance Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
         "operationId": "VCRequestsController_createVcIssuanceRequest",
@@ -478,7 +544,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC Issuance Request"]
+        "tags": ["VC Issuance Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs/requests/{id}": {
@@ -513,7 +580,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC Issuance Request"]
+        "tags": ["VC Issuance Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
         "operationId": "VCRequestsController_vcIssuanceResponse",
@@ -550,7 +618,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC Issuance Request"]
+        "tags": ["VC Issuance Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "delete": {
         "operationId": "VCRequestsController_deleteVcIssuanceRequest",
@@ -573,7 +642,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC Issuance Request"]
+        "tags": ["VC Issuance Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs": {
@@ -616,7 +686,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VCS"]
+        "tags": ["VCS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs/{id}": {
@@ -651,7 +722,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VCS"]
+        "tags": ["VCS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs/revoke/{id}": {
@@ -676,7 +748,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VCS"]
+        "tags": ["VCS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/requests/callback": {
@@ -696,7 +769,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP Submit Request"]
+        "tags": ["VP Submit Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/requests": {
@@ -728,7 +802,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP Submit Request"]
+        "tags": ["VP Submit Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "get": {
         "operationId": "VPRequestsController_getVPSubmitRequests",
@@ -777,7 +852,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP Submit Request"]
+        "tags": ["VP Submit Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/requests/{id}": {
@@ -812,7 +888,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP Submit Request"]
+        "tags": ["VP Submit Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "delete": {
         "operationId": "VPRequestsController_deleteVcIssuanceRequest",
@@ -835,7 +912,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP Submit Request"]
+        "tags": ["VP Submit Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
         "operationId": "VPRequestsController_vpSubmitAndVerify",
@@ -872,7 +950,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP Submit Request"]
+        "tags": ["VP Submit Request"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/did-connections": {
@@ -892,7 +971,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"]
+        "tags": ["VPS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/verify": {
@@ -922,7 +1002,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"]
+        "tags": ["VPS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps": {
@@ -944,7 +1025,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"]
+        "tags": ["VPS"],
+        "security": [{ "defaultBearerAuth": [] }]
       },
       "get": {
         "operationId": "VPController_getVPVerificationHistories",
@@ -993,7 +1075,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"]
+        "tags": ["VPS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/{id}": {
@@ -1028,7 +1111,8 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"]
+        "tags": ["VPS"],
+        "security": [{ "defaultBearerAuth": [] }]
       }
     }
   },
@@ -1036,7 +1120,43 @@
   "tags": [],
   "servers": [],
   "components": {
+    "securitySchemes": { "defaultBearerAuth": { "scheme": "bearer", "bearerFormat": "JWT", "type": "http" } },
     "schemas": {
+      "DIDTokenHeader": {
+        "type": "object",
+        "properties": {
+          "alg": { "type": "object", "description": "알고리즘", "example": "EdDSA" },
+          "typ": { "type": "object", "description": "encoded object 타입", "example": "JWT" }
+        },
+        "required": ["alg", "typ"]
+      },
+      "DIDTokenPayload": {
+        "type": "object",
+        "properties": {
+          "iss": {
+            "type": "string",
+            "description": "제출자의 DID",
+            "example": "did:infra:space:5F7aQEqETc1VHaE3YSrQaCRxmyxFZzj1XXJibbcjJXpsbSe1"
+          },
+          "iat": { "type": "string", "description": "발급 일시(timestamp)", "example": 1673231288 },
+          "exp": { "type": "string", "description": "만료 일시(timestamp)", "example": 1673234888 },
+          "aud": {
+            "description": "토큰 수신자",
+            "example": ["IWS.Cert"],
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["iss", "iat", "exp", "aud"]
+      },
+      "DIDToken": {
+        "type": "object",
+        "properties": {
+          "header": { "$ref": "#/components/schemas/DIDTokenHeader" },
+          "payload": { "$ref": "#/components/schemas/DIDTokenPayload" }
+        },
+        "required": ["header", "payload"]
+      },
       "VCCallbackResponseDTO": {
         "type": "object",
         "properties": {
@@ -2351,5 +2471,6 @@
         "required": ["vpId", "verifyResult", "createdAt", "presentationType", "vpRequestId", "vp", "verifierDID"]
       }
     }
-  }
+  },
+  "security": [{ "bearer": [] }]
 }
