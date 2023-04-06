@@ -6,7 +6,7 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs" method="put" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs" method="ost" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -14,7 +14,7 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs/{id}" method="post" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs/{id}" method="patch" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -64,7 +64,7 @@
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/callbacks/vc-requests" method="post" %}
+{% swagger src="../.gitbook/assets/sample_2.json" path="/v1/settings/callbacks/vc-requests" method="patch" %}
 [sample_2.json](../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
