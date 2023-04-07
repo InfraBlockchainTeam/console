@@ -2,10 +2,6 @@
 msgid ""
 msgstr ""
 
-#: infra-digital-certificate/get-started.md:block 1 (header)
-msgid "description: tutorial and best practice"
-msgstr ""
-
 #: infra-digital-certificate/get-started.md:block 2 (header)
 msgid "Get Started"
 msgstr ""
@@ -13,3 +9,6 @@ msgstr ""
 #: infra-digital-certificate/get-started.md:block 3 (paragraph)
 msgid "회원가입 및 키 생성"
 msgstr ""
+
+#~ msgid "description: tutorial and best practice"
+#~ msgstr ""

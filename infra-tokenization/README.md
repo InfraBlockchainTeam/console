@@ -1,7 +1,3 @@
----
-description: Introduction to Infra Token Services
----
-
 # Introduction
 
 ### Infra Tokenization이란? <a href="#introduction" id="introduction"></a>
@@ -11,8 +7,6 @@ Infra Tokenization은 [Infrablockchain](https://infrablockchain.net)에서 제�
 NFT, 법정화폐 기반 스테이블 토큰, 증권형 토큰을 발행하고 운영할 수 있고 필요한 모든 과정은 콘솔 또는 SDK를 통해 간편하게 진행할 수 있습니다.
 
 영지식증명(Zero-Knowledge Proof) 기술을 활용해서 프라이버시가 보호되는 토큰 전송이 가능하며, 중앙 서버 없이 블록체인 상에서 동작하는 토큰 거래 시스템 (DEX, Decentralized Exchange)을 구축할 수 있습니다.
-
-
 
 ### Features
 
@@ -32,9 +26,6 @@ NFT 마켓 플레이스는 발행된 NFT를 거래할 수 있는 시스템입니
 
 DEX는 중앙 서버가 필요하지 않은, 완전하게 블록체인 위에서 동작하는 토큰 거래 시스템입니다. 토큰 거래에 필요한 모든 기능은 블록체인의 스마트 컨트랙트로 구현 되어 있으며 필요한 경우 손쉽게 거래 시스템을 구축할 수 있도록 지원하고 있습니다.
 
-
-
 ### Support us <a href="#introduction" id="introduction"></a>
 
 ![](.gitbook/assets/image.png)
-

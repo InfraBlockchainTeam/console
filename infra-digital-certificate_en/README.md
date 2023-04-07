@@ -1,12 +1,6 @@
----
-description: Introduction to Infra Digital Certificate Services
----
-
 # Introduction
 
-## Introduction
-
-#### Infra Digital Certificate란? <a href="#introduction" id="introduction"></a>
+### Infra Digital Certificate란? <a href="#introduction" id="introduction"></a>
 
 Infra Digital Certificate는 [InfraBlockchain](https://infrablockchain.net/)에서 제공하는 위변조 불가 디지털 증명서 발급 및 검증 시스템 입니다.
 
@@ -14,7 +8,7 @@ Infra Digital Certificate는 [InfraBlockchain](https://infrablockchain.net/)에�
 
 발급받은 블록체인 기반의 디지털 증명서는 위변조가 불가능하며, 발급 및 검증을 위한 인력과 비용을 획기적으로 줄일 수 있습니다. 또한, 검증시 중앙 서버를 거치지 않아 개인의 프라이버시를 완벽하게 보호합니다.
 
-#### Features
+### Features
 
 **증명서 발급**
 

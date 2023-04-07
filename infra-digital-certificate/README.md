@@ -1,7 +1,3 @@
----
-description: Introduction to Infra Digital Certificate Services
----
-
 # Introduction
 
 ### Infra Digital Certificate란? <a href="#introduction" id="introduction"></a>
@@ -11,8 +7,6 @@ Infra Digital Certificate는 [InfraBlockchain](https://infrablockchain.net/)에�
 신분증, 진료기록 및 백신접종 증명서, 계약서 등 모든 증명서를 블록체인으로 검증 가능한 디지털 증명서로 발급할 수 있습니다. 사용자 기기에서 블록체인 ID를 만들고 신뢰기관이 증명서를 발급하면 QR 코드로 손쉽게 증명서 제출, 검증이 가능합니다.
 
 발급받은 블록체인 기반의 디지털 증명서는 위변조가 불가능하며, 발급 및 검증을 위한 인력과 비용을 획기적으로 줄일 수 있습니다. 또한, 검증시 중앙 서버를 거치지 않아 개인의 프라이버시를 완벽하게 보호합니다.
-
-
 
 ### Features
 
@@ -27,4 +21,3 @@ Infra Digital Certificate는 [InfraBlockchain](https://infrablockchain.net/)에�
 **대시보드를 통한 증명서 관리 및 통계**
 
 증명서 발급현황 및 시간대별 검증 내역 등 서비스 운영에 유용한 각종 통계 정보를 시각화하여 제공합니다. 또한 대시보드 커스터마이징 기능을 제공하여 필요한 그래프 및 통계 정보를 손쉽게 확인할 수 있습니다.
-

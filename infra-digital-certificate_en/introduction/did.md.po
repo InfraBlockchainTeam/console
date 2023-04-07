@@ -19,10 +19,6 @@ msgid "DID는 '리소스'를 식별하는 문자열인 '글로벌 고유 식별�
 msgstr ""
 
 #: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
-msgid "리소스는 모든 웹 표준 에서 W3C가 사용하는 용어이며 엔터티(entity)라는 용어를 사용하기도 합니다."
-msgstr ""
-
-#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
 msgid ""
 "DID는 기존의 신원 확인 방식과 달리 중앙 시스템에 의해 통제되지 않으며 개개인이 자신의 정보에 완전한 통제권을 갖도록 하는 "
 "기술입니다."
@@ -88,3 +84,13 @@ msgstr "[^1]: https://www.w3.org/TR/did-core/"
 #, fuzzy
 msgid "[^2]: https://www.w3.org/TR/did-spec-registries/"
 msgstr "[^2]: https://www.w3.org/TR/did-spec-registries/"
+
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid "리소스는 모든 웹 표준에서 W3C가 사용하는 용어이며 엔터티(entity)라는 용어를 사용하기도 합니다."
+msgstr ""
+
+#~ msgid "description: test"
+#~ msgstr ""
+
+#~ msgid "리소스는 모든 웹 표준 에서 W3C가 사용하는 용어이며 엔터티(entity)라는 용어를 사용하기도 합니다."
+#~ msgstr ""

@@ -2,10 +2,6 @@
 msgid ""
 msgstr ""
 
-#: infra-digital-certificate/guide.md:block 1 (header)
-msgid "description: Infra Token의 기본적인 사용방법을 배울 수 있는 튜토리얼입니다."
-msgstr ""
-
 #: infra-digital-certificate/guide.md:block 2 (header)
 msgid "Tutorial"
 msgstr ""
@@ -49,3 +45,6 @@ msgstr ""
 #: infra-digital-certificate/guide.md:block 9 (paragraph)
 msgid "문제가 발생한 경우 [Trouble Shooting](troubleshooting.md)을 확인하세요."
 msgstr ""
+
+#~ msgid "description: Infra Token의 기본적인 사용방법을 배울 수 있는 튜토리얼입니다."
+#~ msgstr ""

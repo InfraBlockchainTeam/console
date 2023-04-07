@@ -2,10 +2,6 @@
 msgid ""
 msgstr ""
 
-#: infra-digital-certificate/README.md:block 1 (header)
-msgid "description: Introduction to Infra Digital Certificate Services"
-msgstr ""
-
 #: infra-digital-certificate/README.md:block 2 (header)
 msgid "Introduction"
 msgstr ""
@@ -66,3 +62,6 @@ msgid ""
 "증명서 발급현황 및 시간대별 검증 내역 등 서비스 운영에 유용한 각종 통계 정보를 시각화하여 제공합니다. 또한 대시보드 커스터마이징 "
 "기능을 제공하여 필요한 그래프 및 통계 정보를 손쉽게 확인할 수 있습니다."
 msgstr ""
+
+#~ msgid "description: Introduction to Infra Digital Certificate Services"
+#~ msgstr ""

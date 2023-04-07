@@ -1,6 +1,6 @@
 # console
 
-## translate 작업 참고(작업 중)
+## translate 작업 참고
 
 [mdpo](https://mondeja.github.io/mdpo/latest/index.html) 사용.
 
@@ -20,3 +20,7 @@
   # 예시(cert 문서)
   make_en_mdpo.sh infra-digital-certificate
 ```
+
+# 작성 규칙
+
+- gitbook description은 po 변환 오류로 미작성합니다.

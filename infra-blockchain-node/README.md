@@ -1,7 +1,3 @@
----
-description: Introduction to Infra Blockchain Node
----
-
 # Introduction
 
 ### Infra Blockchain Node란? <a href="#introduction" id="introduction"></a>
@@ -26,9 +22,6 @@ InfraBlockchain은 구축된 노드가 이상이 없는 지속적으로 체크�
 
 InfraBlockchain에서 제공하는 Personal Web Node(PWN)을 통해 블록체인 액션을 위한 인증을 간편하게 수행할 수 있습니다. PWN에 저장된 인증 정보를 연동하면 익스플로러에서 간편하게 액션을 호출하고 변동된 데이터를 확인할 수 있습니다.
 
-
-
 ### Support us <a href="#introduction" id="introduction"></a>
 
 ![](<.gitbook/assets/image (1).png>)<img src=".gitbook/assets/image.png" alt="" data-size="original">
-
