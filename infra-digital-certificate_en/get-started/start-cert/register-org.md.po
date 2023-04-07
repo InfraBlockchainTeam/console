@@ -1,0 +1,8 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/register-org.md:block 1
+#: (header)
+msgid "조직(Organization) 등록"
+msgstr ""

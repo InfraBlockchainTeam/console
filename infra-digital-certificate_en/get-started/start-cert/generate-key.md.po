@@ -1,0 +1,8 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/generate-key.md:block 1
+#: (header)
+msgid "키 생성"
+msgstr ""

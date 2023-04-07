@@ -1,0 +1,27 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/guide/sdk-reference.md:block 1 (header)
+msgid "SDK reference"
+msgstr ""
+
+#: infra-digital-certificate/guide/sdk-reference.md:block 2 (paragraph)
+msgid "{% tabs %} {% tab title=\"Node\" %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/sdk-reference.md:block 3 (paragraph)
+msgid "{% endtab %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/sdk-reference.md:block 4 (paragraph)
+msgid "{% tab title=\"Java\" %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/sdk-reference.md:block 6 (paragraph)
+msgid "{% tab title=\"Swift\" %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/sdk-reference.md:block 7 (paragraph)
+msgid "{% endtab %} {% endtabs %}"
+msgstr ""

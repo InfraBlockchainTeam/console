@@ -1,0 +1,8 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/instance.md:block 1
+#: (header)
+msgid "서버 인스턴스 생성"
+msgstr ""

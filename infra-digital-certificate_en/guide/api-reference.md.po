@@ -1,0 +1,7 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference.md:block 1 (header)
+msgid "API reference"
+msgstr ""

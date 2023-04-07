@@ -1,0 +1,7 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/get-started/signin.md:block 1 (header)
+msgid "회원 가입"
+msgstr ""

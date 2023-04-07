@@ -1,0 +1,591 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 1 (header)
+msgid "Console"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 2 (header)
+msgid ""
+"Tutorial: Get started with Amazon EC2 Windows instances <a "
+"href=\"#ec2_getstarted\" id=\"ec2_getstarted\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 3 (paragraph)
+msgid ""
+"[PDF](https://docs.aws.amazon.com/pdfs/AWSEC2/latest/WindowsGuide/ec2-wg.pdf#EC2_GetStarted)[RSS](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/amazon-"
+"ec2-release-notes.rss)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 4 (paragraph)
+msgid ""
+"Use this tutorial to get started with Amazon Elastic Compute Cloud (Amazon "
+"EC2). You'll learn how to launch, connect to, and use a Windows instance. An"
+" *instance* is a virtual server in the AWS Cloud. With Amazon EC2, you can "
+"set up and configure the operating system and applications that run on your "
+"instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 5 (paragraph)
+msgid ""
+"When you sign up for AWS, you can get started with Amazon EC2 using the [AWS"
+" Free Tier](https://aws.amazon.com/free/). If you created your AWS account "
+"less than 12 months ago, and have not already exceeded the free tier "
+"benefits for Amazon EC2, it won't cost you anything to complete this "
+"tutorial because we help you select options that are within the free tier "
+"benefits. Otherwise, you'll incur the standard Amazon EC2 usage fees from "
+"the time that you launch the instance until you terminate the instance "
+"(which is the final task of this tutorial), even if it remains idle."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 6 (paragraph)
+msgid "Related tutorials"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 7 (unordered list)
+msgid ""
+"If you'd prefer to launch a Linux instance, see this tutorial in the *Amazon"
+" EC2 User Guide for Linux Instances*: [Get started with Amazon EC2 Linux "
+"instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 7 (unordered list)
+msgid ""
+"If you'd prefer to use the command line, see this tutorial in the *AWS "
+"Command Line Interface User Guide*: [Using Amazon EC2 through the AWS "
+"CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-ec2.html)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 8 (paragraph)
+msgid "**Contents**"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 9 (unordered list)
+msgid ""
+"[Overview](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-get-"
+"started-overview)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 9 (unordered list)
+msgid ""
+"[Prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-getstarted-"
+"prereqs)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 9 (unordered list)
+msgid ""
+"[Step 1: Launch an "
+"instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-launch-"
+"instance)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 9 (unordered list)
+msgid ""
+"[Step 2: Connect to your "
+"instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-connect-"
+"to-instance-windows)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 9 (unordered list)
+msgid ""
+"[Step 3: Clean up your "
+"instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-clean-"
+"up-your-instance)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 9 (unordered list)
+msgid ""
+"[Next "
+"steps](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-next-"
+"steps)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 10 (header)
+msgid ""
+"Overview <a href=\"#ec2-get-started-overview\" id=\"ec2-get-started-"
+"overview\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 11 (paragraph)
+msgid ""
+"The instance launched in this tutorial is an Amazon EBS-backed instance "
+"(meaning that the root volume is an EBS volume). You can either specify the "
+"Availability Zone in which your instance runs, or let Amazon EC2 select an "
+"Availability Zone for you. Availability Zones are multiple, isolated "
+"locations within each Region. You can think of an Availability Zone as an "
+"isolated data center."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 12 (paragraph)
+msgid ""
+"When you launch your instance, you secure it by specifying a key pair (to "
+"prove your identity) and a security group (which acts as a virtual firewall "
+"to control ingoing and outgoing traffic). When you connect to your instance,"
+" you must provide the private key of the key pair that you specified when "
+"you launched your instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 13 (paragraph)
+msgid ""
+"![An Amazon EBS-backed instance with an additional Amazon EBS "
+"volume](https://docs.aws.amazon.com/images/AWSEC2/latest/WindowsGuide/images/overview_getting_started.png)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 14 (header)
+msgid ""
+"Prerequisites <a href=\"#ec2-getstarted-prereqs\" id=\"ec2-getstarted-"
+"prereqs\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 15 (paragraph)
+msgid ""
+"Before you begin, be sure that you've completed the steps in [Set up to use "
+"Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/get-set-"
+"up-for-amazon-ec2.html)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 16 (header)
+msgid ""
+"Step 1: Launch an instance <a href=\"#ec2-launch-instance\" id=\"ec2-launch-"
+"instance\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 17 (paragraph)
+msgid ""
+"You can launch a Windows instance using the AWS Management Console as "
+"described in the following procedure. This tutorial is intended to help you "
+"quickly launch your first instance, so it doesn't cover all possible "
+"options. For information about advanced options, see [Launch an instance "
+"using the new launch instance "
+"wizard](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-"
+"instance-wizard.html). For information about other ways to launch your "
+"instance, see [Launch your "
+"instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/LaunchingAndUsingInstances.html)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 18 (paragraph)
+msgid "To launch an instance"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 19 (ordered list)
+msgid "Open the Amazon EC2 console at <https://console.aws.amazon.com/ec2/>."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 19 (ordered list)
+msgid ""
+"From the EC2 console dashboard, in the Launch instance box, choose Launch "
+"instance, and then choose Launch instance from the options that appear."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 19 (ordered list)
+msgid ""
+"Under Name and tags, for Name, enter a descriptive name for your instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 19 (ordered list)
+msgid ""
+"Under Application and OS Images (Amazon Machine Image), do the following:"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 19 (ordered list)
+msgid ""
+"Choose Quick Start, and then choose Windows. This is the operating system "
+"(OS) for your instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 19 (ordered list)
+msgid ""
+"From Amazon Machine Image (AMI), select the AMI for Windows Server 2016 Base"
+" or later.. Notice that these AMIs are marked Free tier eligible. An *Amazon"
+" Machine Image (AMI)* is a basic configuration that serves as a template for"
+" your instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 20 (paragraph)
+msgid ""
+"Under Instance type, from the Instance type list, you can select the "
+"hardware configuration for your instance. Choose the `t2.micro` instance "
+"type, which is selected by default. The `t2.micro` instance type is eligible"
+" for the free tier. In Regions where `t2.micro` is unavailable, you can use "
+"a `t3.micro` instance under the free tier. For more information, see [AWS "
+"Free Tier](https://aws.amazon.com/free/)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 21 (paragraph)
+msgid ""
+"Under Key pair (login), for Key pair name, choose the key pair that you "
+"created when getting set up. Note that you must select an RSA key. ED25519 "
+"keys are not supported for Windows instances."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 22 (paragraph)
+msgid "Warning"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 23 (paragraph)
+msgid ""
+"Do not choose Proceed without a key pair (Not recommended). If you launch "
+"your instance without a key pair, then you can't connect to it."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 24 (paragraph)
+msgid ""
+"Next to Network settings, choose Edit. For Security group name, you'll see "
+"that the wizard created and selected a security group for you. You can use "
+"this security group, or alternatively you can select the security group that"
+" you created when getting set up using the following steps:"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 25 (ordered list)
+msgid "Choose Select existing security group."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 25 (ordered list)
+msgid ""
+"From Common security groups, choose your security group from the list of "
+"existing security groups."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 26 (paragraph)
+msgid ""
+"Keep the default selections for the other configuration settings for your "
+"instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 27 (paragraph)
+msgid ""
+"Review a summary of your instance configuration in the Summary panel, and "
+"when you're ready, choose Launch instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 28 (paragraph)
+msgid ""
+"A confirmation page lets you know that your instance is launching. Choose "
+"View all instances to close the confirmation page and return to the console."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 29 (paragraph)
+msgid ""
+"On the Instances screen, you can view the status of the launch. It takes a "
+"short time for an instance to launch. When you launch an instance, its "
+"initial state is `pending`. After the instance starts, its state changes to "
+"`running` and it receives a public DNS name. If the Public IPv4 DNS column "
+"is hidden, choose the settings icon ( "
+"![](https://docs.aws.amazon.com/images/AWSEC2/latest/WindowsGuide/images/settings-"
+"icon.png) ) in the top-right corner, toggle on Public IPv4 DNS, and choose "
+"Confirm."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 30 (paragraph)
+msgid ""
+"It can take a few minutes for the instance to be ready for you to connect to"
+" it. Check that your instance has passed its status checks; you can view "
+"this information in the Status check column."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 31 (header)
+msgid ""
+"Step 2: Connect to your instance <a href=\"#ec2-connect-to-instance-"
+"windows\" id=\"ec2-connect-to-instance-windows\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 32 (paragraph)
+msgid ""
+"To connect to a Windows instance, you must retrieve the initial "
+"administrator password and then enter this password when you connect to your"
+" instance using Remote Desktop. It takes a few minutes after instance launch"
+" before this password is available."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 33 (paragraph)
+msgid ""
+"The name of the administrator account depends on the language of the "
+"operating system. For example, for English, it's `Administrator`, for French"
+" it's `Administrateur`, and for Portuguese it's `Administrador`. For more "
+"information, see [Localized Names for Administrator Account in "
+"Windows](http://social.technet.microsoft.com/wiki/contents/articles/13813.localized-"
+"names-for-administrator-account-in-windows.aspx) in the Microsoft TechNet "
+"Wiki."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 34 (paragraph)
+msgid ""
+"If you've joined your instance to a domain, you can connect to your instance"
+" using domain credentials you've defined in AWS Directory Service. On the "
+"Remote Desktop login screen, instead of using the local computer name and "
+"the generated password, use the fully-qualified user name for the "
+"administrator (for example, `corp.example.com\\Admin`), and the password for"
+" this account."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 35 (paragraph)
+msgid ""
+"If you receive an error while attempting to connect to your instance, see "
+"[Remote Desktop can't connect to the remote "
+"computer](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/troubleshoot-"
+"connect-windows-instance.html#rdp-issues)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 36 (unordered list)
+msgid "New console"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 36 (unordered list)
+msgid "Old console"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 37 (paragraph)
+msgid "To connect to your Windows instance using an RDP client"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"In the navigation pane, select Instances. Select the instance and then "
+"choose Connect."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"On the Connect to instance page, choose the RDP client tab, and then choose "
+"Get password."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"![Get password for "
+"RDP.](https://docs.aws.amazon.com/images/AWSEC2/latest/WindowsGuide/images/windows-"
+"connect-rdp-get-password.png)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"Choose Browse and navigate to the private key (`.pem`) file you created when"
+" you launched the instance. Select the file and choose Open to copy the "
+"entire contents of the file to this window."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"Choose Decrypt Password. The console displays the default administrator "
+"password for the instance under Password, replacing the Get password link "
+"shown previously. Save the password in a safe place. This password is "
+"required to connect to the instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"![Password location for "
+"RDP.](https://docs.aws.amazon.com/images/AWSEC2/latest/WindowsGuide/images/windows-"
+"connect-password.png)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"Choose Download remote desktop file. Your browser prompts you to either open"
+" or save the RDP shortcut file. When you have finished downloading the file,"
+" choose Cancel to return to the Instances page."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"If you opened the RDP file, you'll see the Remote Desktop Connection dialog "
+"box."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"If you saved the RDP file, navigate to your downloads directory, and open "
+"the RDP file to display the dialog box."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"You may get a warning that the publisher of the remote connection is "
+"unknown. Choose Connect to continue to connect to your instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"![Unknown publisher "
+"message.](https://docs.aws.amazon.com/images/AWSEC2/latest/WindowsGuide/images/windows-"
+"connect-unknown-publisher.png)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"The administrator account is chosen by default. Copy and paste the password "
+"that you saved previously."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid "Tip"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"If you receive a \"Password Failed\" error, try entering the password "
+"manually. Copying and pasting content can corrupt it."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"Due to the nature of self-signed certificates, you may get a warning that "
+"the security certificate could not be authenticated. Use the following steps"
+" to verify the identity of the remote computer, or simply choose Yes "
+"(Windows) or Continue (Mac OS X) if you trust the certificate."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"![\"Identity cannot be verified\" "
+"window.](https://docs.aws.amazon.com/images/AWSEC2/latest/WindowsGuide/images/windows-"
+"connect-identity.png)"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"If you are using Remote Desktop Connection on a Windows computer, choose "
+"View certificate. If you are using Microsoft Remote Desktop on a Mac, choose"
+" Show Certificate."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"Choose the Details tab, and scroll down to Thumbprint (Windows) or SHA1 "
+"Fingerprints (Mac OS X). This is the unique identifier for the remote "
+"computer's security certificate."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"In the Amazon EC2 console, select the instance, choose Actions, Monitor and "
+"troubleshoot, Get system log."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"In the system log output, look for `RDPCERTIFICATE-THUMBPRINT`. If this "
+"value matches the thumbprint or fingerprint of the certificate, you have "
+"verified the identity of the remote computer."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"If you are using Remote Desktop Connection on a Windows computer, return to "
+"the Certificate dialog box and choose OK. If you are using Microsoft Remote "
+"Desktop on a Mac, return to the Verify Certificate and choose Continue."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"[Windows] Choose Yes in the Remote Desktop Connection window to connect to "
+"your instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 38 (ordered list)
+msgid ""
+"[Mac OS X] Log in as prompted, using the default administrator account and "
+"the default administrator password that you recorded or copied previously. "
+"Note that you might need to switch spaces to see the login screen. For more "
+"information, see [Add spaces and switch between "
+"them](https://support.apple.com/en-us/HT204100)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 39 (header)
+msgid ""
+"Step 3: Clean up your instance <a href=\"#ec2-clean-up-your-instance\" "
+"id=\"ec2-clean-up-your-instance\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 40 (paragraph)
+msgid ""
+"After you've finished with the instance that you created for this tutorial, "
+"you should clean up by terminating the instance. If you want to do more with"
+" this instance before you clean up, see [Next "
+"steps](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-next-"
+"steps)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 41 (paragraph)
+msgid "Important"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 42 (paragraph)
+msgid ""
+"Terminating an instance effectively deletes it; you can't reconnect to an "
+"instance after you've terminated it."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 43 (paragraph)
+msgid ""
+"If you launched an instance that is not within the [AWS Free "
+"Tier](https://aws.amazon.com/free/), you'll stop incurring charges for that "
+"instance as soon as the instance status changes to `shutting down` or "
+"`terminated`. To keep your instance for later, but not incur charges, you "
+"can stop the instance now and then start it again later. For more "
+"information, see [Stop and start your "
+"instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Stop_Start.html)."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 44 (paragraph)
+msgid "To terminate your instance"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 45 (ordered list)
+msgid ""
+"In the navigation pane, choose Instances. In the list of instances, select "
+"the instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 45 (ordered list)
+msgid "Choose Instance state, Terminate instance."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 45 (ordered list)
+msgid "Choose Terminate when prompted for confirmation."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 45 (ordered list)
+msgid ""
+"Amazon EC2 shuts down and terminates your instance. After your instance is "
+"terminated, it remains visible on the console for a short while, and then "
+"the entry is automatically deleted. You cannot remove the terminated "
+"instance from the console display yourself."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 46 (header)
+msgid "Next steps <a href=\"#ec2-next-steps\" id=\"ec2-next-steps\"></a>"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 47 (paragraph)
+msgid ""
+"After you start your instance, you might want to try some of the following "
+"exercises:"
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 48 (unordered list)
+msgid ""
+"Learn how to remotely manage your EC2 instance using Run Command. For more "
+"information, see [AWS Systems Manager Run "
+"Command](https://docs.aws.amazon.com/systems-"
+"manager/latest/userguide/execute-remote-commands.html) in the *AWS Systems "
+"Manager User Guide*."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 48 (unordered list)
+msgid ""
+"Configure a CloudWatch alarm to notify you if your usage exceeds the Free "
+"Tier. For more information, see [Tracking your AWS Free Tier "
+"usage](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/tracking-"
+"free-tier-usage.html) in the *AWS Billing User Guide*."
+msgstr ""
+
+#: infra-digital-certificate/guide/console.md:block 48 (unordered list)
+msgid ""
+"Add an EBS volume. For more information, see [Create an Amazon EBS "
+"volume](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-creating-"
+"volume.html) and [Attach an Amazon EBS volume to an "
+"instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-"
+"attaching-volume.html)."
+msgstr ""

@@ -1,0 +1,95 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 1 (header)
+msgid "Issue"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 2
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-templates\""
+" method=\"get\" %} [sample (1).json](../.gitbook/assets/sample (1).json) {% "
+"endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 3
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-templates\""
+" method=\"post\" %} [sample (1).json](../.gitbook/assets/sample (1).json) {%"
+" endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 4
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-"
+"templates/{id}\" method=\"get\" %} [sample "
+"(1).json](../.gitbook/assets/sample (1).json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 5
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-"
+"templates/{id}\" method=\"delete\" %} [sample "
+"(1).json](../.gitbook/assets/sample (1).json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 6
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-requests\" "
+"method=\"get\" %} [sample (1).json](../.gitbook/assets/sample (1).json) {% "
+"endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 7
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-requests\" "
+"method=\"post\" %} [sample (1).json](../.gitbook/assets/sample (1).json) {% "
+"endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 8
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-"
+"requests/{id}/approve\" method=\"post\" %} [sample "
+"(1).json](../.gitbook/assets/sample (1).json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 9
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-"
+"requests/{id}/reject\" method=\"post\" %} [sample "
+"(1).json](../.gitbook/assets/sample (1).json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 10
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vc-"
+"requests/{id}\" method=\"delete\" %} [sample "
+"(1).json](../.gitbook/assets/sample (1).json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 11
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" path=\"/vcs\" "
+"method=\"get\" %} [sample (1).json](../.gitbook/assets/sample (1).json) {% "
+"endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/issue(1).md:block 12
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../.gitbook/assets/sample (1).json\" "
+"path=\"/vcs/{id}/revoke\" method=\"post\" %} [sample "
+"(1).json](../.gitbook/assets/sample (1).json) {% endswagger %}"
+msgstr ""

@@ -1,0 +1,113 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 1 (header)
+msgid "DID Token (In progress)"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 2 (paragraph)
+msgid "Cert 서버와 통신하기 위해서 요청자는 자신의 DID로 JSON Web Token(JWT)를 생성하여 전달합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 3 (unordered
+#: list)
+msgid ""
+"*(TBD) 모든 통신을 DID 토큰으로 할지(Access) / DID token 으로 access token 발행해서(Auth) "
+"처리할지 결정해야함.*"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 4 (header)
+msgid "Header"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 5 (paragraph)
+msgid "Header에는 토큰의 타입과 토큰에 사용된 서명 알고리즘을 기술합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 6 (unordered
+#: list)
+msgid "'alg': 서명 알고리즘입니다. DID Token은 `\"EdDSA\"`를 사용합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 6 (unordered
+#: list)
+msgid "'typ': 토큰의 타입입니다. DID Token은 `\"JWT\"`를 사용합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 7 (paragraph)
+msgid "아래는 header의 예시입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 9 (header)
+msgid "Payload"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 10 (paragraph)
+msgid "Payload에는 인증에 필요한 정보를 포함합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 11 (unordered
+#: list)
+msgid "'iss': 요청자의 infra DID 입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 11 (unordered
+#: list)
+msgid "'iat': JWT의 생성 일시의 (timestamp)"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 11 (unordered
+#: list)
+msgid "'exp': JWT의 만료 일시입니다.(timestamp)"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 11 (unordered
+#: list)
+msgid "'aud': JWT의 수신자로 Cert 서버에 제출하기 위해 `IWS.Cert`로 사용합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 12 (paragraph)
+msgid "아래는 payload의 예시입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 14 (header)
+msgid "Signature"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 15 (paragraph)
+msgid "Infra DID Token의 Signature 슈도코드(pseudocode)의 구조는 다음과 같습니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 17 (paragraph)
+msgid "위 payload 예시를 이용해 서명하여 생성한 DID Token의 예시입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 19 (header)
+msgid "Generate JWT / Verify JWT"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 20 (unordered
+#: list)
+msgid "제공되는 InfraBlockchain SDK를 통해 EdDSA 알고리즘 JWT를 생성할 수 있습니다. (링크 추가 필요)"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 20 (unordered
+#: list)
+msgid ""
+"Edwards-curve Digital Signature Algorithm(EdDSA) 알고리즘은 [RFC8037 3.1 "
+"항](https://www.rfc-editor.org/rfc/rfc8037.html#section-3.1)에 의해 지원 알고리즘에 추가 "
+"되었지만 아직 많은 라이브러리에서 이를 지원하지 않고 있습니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 20 (unordered
+#: list)
+msgid ""
+"지원되는 현황은 [jwt.io 지원 라이브러리](https://jwt.io/libraries) 페이지에서 확인 할 수 있습니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did-token.md:block 20 (unordered
+#: list)
+msgid ""
+"javascript의 알려진 패키지 중 `jose`는 지원하지만 `jsonwebtoken`(jwt.io)에서는 아직 지원하지 않습니다."
+msgstr ""

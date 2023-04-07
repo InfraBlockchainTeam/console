@@ -1,0 +1,139 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 1 (header)
+msgid "Table of contents"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Introduction](README.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[DID](introduction/did.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VC](introduction/vc.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VP](introduction/vp.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[InfraDID Communication Protocol(ICP)](introduction/icp.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[DID Token](introduction/did-token.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Get Started](get-started.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[회원가입](get-started/signin.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Cert 서비스 시작](get-started/start-cert.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[키 생성](get-started/start-cert/generate-key.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[조직 등록](get-started/start-cert/register-org.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[인스턴스 생성](get-started/start-cert/instance.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[서비스 연동 및 설정](get-started/setting.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Callback URL 설정](get-started/setting/callbacks.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VC/VP 템플릿 설정](get-started/setting/templates.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VC 발급](get-started/issue-vc.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[발급 요청](get-started/issue-vc/request.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[발급 처리](get-started/issue-vc/issue.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[발급 내역 조회](get-started/issue-vc/history.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VC 폐기](get-started/issue-vc/revoke.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VP 검증](get-started/verify-vp.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[DID 연결](get-started/verify-vp/connection.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VP 제출](get-started/verify-vp/submit.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VP 검증](get-started/verify-vp/verify.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[VP 검증 이력 조회](get-started/verify-vp/history.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[SSO 로그인 구축](get-started/sso.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Guide](guide.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Console](guide/console.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[API reference](guide/api-reference.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Issue API](guide/api-reference/issue.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Verify API](guide/api-reference/verify.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[SDK reference](guide/sdk-reference.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[Troubleshooting](guide/troubleshooting.md)"
+msgstr ""

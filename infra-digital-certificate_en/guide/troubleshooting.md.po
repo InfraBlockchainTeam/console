@@ -1,0 +1,11 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/guide/troubleshooting.md:block 1 (header)
+msgid "Troubleshooting"
+msgstr ""
+
+#: infra-digital-certificate/guide/troubleshooting.md:block 2 (header)
+msgid "Text encoder 에러"
+msgstr ""

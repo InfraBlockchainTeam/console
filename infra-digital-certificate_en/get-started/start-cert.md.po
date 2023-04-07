@@ -1,0 +1,7 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert.md:block 1 (header)
+msgid "Cert 서비스 시작하기"
+msgstr ""

@@ -1,0 +1,90 @@
+#
+msgid ""
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 1 (header)
+msgid "Decentralized Identity(DID)"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 2 (unordered list)
+msgid "본 문서는 DID에 대한 간단한 소개를 담고 있습니다. 자세한 정보는 W3C[^1]을 참고하시기 바랍니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 3 (header)
+msgid "정의"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid "DID는 '리소스'를 식별하는 문자열인 '글로벌 고유 식별자'의 새로운 형태 입니다.<sup>1</sup>[^1]"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid "리소스는 모든 웹 표준 에서 W3C가 사용하는 용어이며 엔터티(entity)라는 용어를 사용하기도 합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid ""
+"DID는 기존의 신원 확인 방식과 달리 중앙 시스템에 의해 통제되지 않으며 개개인이 자신의 정보에 완전한 통제권을 갖도록 하는 "
+"기술입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid ""
+"기업, 정부가 개인의 데이터를 소유하게 되며 자신의 데이터임에도 불구하고 기업의 결정에 따라 접근이 가능한 기존의 중앙 시스템의 문제를 "
+"바로잡고자 W3C의 탈 중앙운동을 전개하며 등장하였습니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid "개인이 자신의 데이터를 직접 관리하며 중앙화 된 기관을 거치지 않으면서도 이를 검증 할 수 있습니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 5 (header)
+msgid "형식"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 6 (unordered list)
+msgid ""
+"DID는 schema, did method, did method-specific identifier 3부분을 구분자`:`로 연결한 간단한"
+" 문자열입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 6 (unordered list)
+msgid "`did:infra:dk37s3Dkjs6D8s...`"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 7 (header)
+msgid "DID 문서"
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
+msgid ""
+"DID의 인증정보, 제어권과 소유권을 증명할 수 있는 공개키와 해당 DID를 어떻게 사용하는지에 대해 설명한 데이터 집합(문서)입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
+msgid ""
+"DID는 그 자체로도 고유한 식별자로서 유용할 수 있지만 DID 리졸버(resolver)를 통해 표준화된 DID 문서를 검색할 수 "
+"있습니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
+msgid "DID 문서는 탈 중앙화된 DID-spec-registry<sup>2</sup>[^2]에 저장됩니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
+msgid "DID 리졸버를 통해 DID문서를 얻는 과정을 DID 레졸루션(resolution)이라고 합니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
+msgid "아래는 InfraDID에서 사용되는 DID 문서의 예시 입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 9 (code)
+#, fuzzy
+msgid "[^1]: https://www.w3.org/TR/did-core/"
+msgstr "[^1]: https://www.w3.org/TR/did-core/"
+
+#: infra-digital-certificate/introduction/did.md:block 9 (code)
+#, fuzzy
+msgid "[^2]: https://www.w3.org/TR/did-spec-registries/"
+msgstr "[^2]: https://www.w3.org/TR/did-spec-registries/"
