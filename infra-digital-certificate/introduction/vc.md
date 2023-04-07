@@ -1,6 +1,6 @@
 # Verifiable Credential(VC)
 
-- VC는 검증가능한 자격증명의 약자입니다.[^1]
+- VC는 [검증가능한 자격증명](https://www.w3.org/TR/vc-data-model/)의 약자입니다.
 
 - `자격증명`이란 어떤 기관이 자격증명의 주체에 대해 사실이라고 주장(claim)하는 모든 정보의 집합입니다.
 
@@ -21,5 +21,3 @@
   - 자격증명이 발급 후 조작되지 않음.
 
   - 자격증명이 말료되거나 해지되지 않음
-
-[^1]: https://www.w3.org/TR/vc-data-model/

@@ -6,16 +6,8 @@ msgstr ""
 msgid "Decentralized Identity(DID)"
 msgstr ""
 
-#: infra-digital-certificate/introduction/did.md:block 2 (unordered list)
-msgid "본 문서는 DID에 대한 간단한 소개를 담고 있습니다. 자세한 정보는 W3C[^1]을 참고하시기 바랍니다."
-msgstr ""
-
 #: infra-digital-certificate/introduction/did.md:block 3 (header)
 msgid "정의"
-msgstr ""
-
-#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
-msgid "DID는 '리소스'를 식별하는 문자열인 '글로벌 고유 식별자'의 새로운 형태 입니다.<sup>1</sup>[^1]"
 msgstr ""
 
 #: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
@@ -64,10 +56,6 @@ msgid ""
 msgstr ""
 
 #: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
-msgid "DID 문서는 탈 중앙화된 DID-spec-registry<sup>2</sup>[^2]에 저장됩니다."
-msgstr ""
-
-#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
 msgid "DID 리졸버를 통해 DID문서를 얻는 과정을 DID 레졸루션(resolution)이라고 합니다."
 msgstr ""
 
@@ -75,22 +63,23 @@ msgstr ""
 msgid "아래는 InfraDID에서 사용되는 DID 문서의 예시 입니다."
 msgstr ""
 
-#: infra-digital-certificate/introduction/did.md:block 9 (code)
-#, fuzzy
-msgid "[^1]: https://www.w3.org/TR/did-core/"
-msgstr "[^1]: https://www.w3.org/TR/did-core/"
-
-#: infra-digital-certificate/introduction/did.md:block 9 (code)
-#, fuzzy
-msgid "[^2]: https://www.w3.org/TR/did-spec-registries/"
-msgstr "[^2]: https://www.w3.org/TR/did-spec-registries/"
-
 #: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
 msgid "리소스는 모든 웹 표준에서 W3C가 사용하는 용어이며 엔터티(entity)라는 용어를 사용하기도 합니다."
 msgstr ""
 
-#~ msgid "description: test"
-#~ msgstr ""
+#: infra-digital-certificate/introduction/did.md:block 2 (unordered list)
+msgid ""
+"본 문서는 DID에 대한 간단한 소개를 담고 있습니다. 자세한 정보는 [W3C](https://www.w3.org/TR/did-"
+"core/)을 참고하시기 바랍니다."
+msgstr ""
 
-#~ msgid "리소스는 모든 웹 표준 에서 W3C가 사용하는 용어이며 엔터티(entity)라는 용어를 사용하기도 합니다."
-#~ msgstr ""
+#: infra-digital-certificate/introduction/did.md:block 4 (unordered list)
+msgid "DID는 '리소스'를 식별하는 문자열인 '글로벌 고유 식별자'의 새로운 형태 입니다."
+msgstr ""
+
+#: infra-digital-certificate/introduction/did.md:block 8 (unordered list)
+msgid ""
+"DID 문서는 탈 중앙화된 [DID-spec-registry](https://www.w3.org/TR/did-spec-"
+"registries/)에 저장됩니다."
+msgstr ""
+
