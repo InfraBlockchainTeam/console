@@ -1,6 +1,6 @@
 # Table of contents
 
-- [Introduction](README.md)
+- [안내](README.md)
 
   - [DID](introduction/did.md)
 
@@ -12,13 +12,13 @@
 
   - [DID Token](introduction/did-token.md)
 
-- [Get Started](get-started.md)
+- [시작하](get-started.md)
 
   - [회원가입](get-started/signin.md)
 
   - [Cert 서비스 시작](get-started/start-cert.md)
 
-    - [키 생성](get-started/start-cert/generate-key.md)
+    - [키 생성 및 등록](get-started/start-cert/generate-key.md)
 
     - [조직 등록](get-started/start-cert/register-org.md)
 
@@ -54,7 +54,7 @@
 
 - [Guide](guide.md)
 
-  - [Console](guide/console.md)
+  - [IWS 콘솔](guide/console.md)
 
   - [API reference](guide/api-reference.md)
 

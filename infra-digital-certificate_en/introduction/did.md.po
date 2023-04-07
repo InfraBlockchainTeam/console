@@ -82,4 +82,3 @@ msgid ""
 "DID 문서는 탈 중앙화된 [DID-spec-registry](https://www.w3.org/TR/did-spec-"
 "registries/)에 저장됩니다."
 msgstr ""
-

@@ -4,5 +4,26 @@ msgstr ""
 
 #: infra-digital-certificate/get-started/start-cert/generate-key.md:block 1
 #: (header)
-msgid "키 생성"
+msgid "키 생성 및 등록"
 msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/generate-key.md:block 2
+#: (unordered list)
+msgid "VC 발급 및 검증을 위해 서비스 제공자의 DID를 생성해야 합니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/generate-key.md:block 2
+#: (unordered list)
+msgid "SDK를 이용하여 발급, 등록 할 수 있지만, 여기서는 콘솔에서 생성 및 등록 하는 과정을 안내합니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/generate-key.md:block 2
+#: (unordered list)
+msgid "{이미지 포함 안내 작성}"
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert/generate-key.md:block 3
+#: (paragraph)
+msgid "다음으로 VC 발급 기관을 등록합니다."
+msgstr ""
+

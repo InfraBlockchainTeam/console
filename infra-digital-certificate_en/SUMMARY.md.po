@@ -7,10 +7,6 @@ msgid "Table of contents"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
-msgid "[Introduction](README.md)"
-msgstr ""
-
-#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[DID](introduction/did.md)"
 msgstr ""
 
@@ -31,19 +27,11 @@ msgid "[DID Token](introduction/did-token.md)"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
-msgid "[Get Started](get-started.md)"
-msgstr ""
-
-#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[회원가입](get-started/signin.md)"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[Cert 서비스 시작](get-started/start-cert.md)"
-msgstr ""
-
-#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
-msgid "[키 생성](get-started/start-cert/generate-key.md)"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
@@ -115,10 +103,6 @@ msgid "[Guide](guide.md)"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
-msgid "[Console](guide/console.md)"
-msgstr ""
-
-#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[API reference](guide/api-reference.md)"
 msgstr ""
 
@@ -137,3 +121,31 @@ msgstr ""
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[Troubleshooting](guide/troubleshooting.md)"
 msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[안내](README.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[시작하](get-started.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[키 생성 및 등록](get-started/start-cert/generate-key.md)"
+msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[IWS 콘솔](guide/console.md)"
+msgstr ""
+
+#~ msgid "[Introduction](README.md)"
+#~ msgstr ""
+
+#~ msgid "[Get Started](get-started.md)"
+#~ msgstr ""
+
+#~ msgid "[키 생성](get-started/start-cert/generate-key.md)"
+#~ msgstr ""
+
+#~ msgid "[Console](guide/console.md)"
+#~ msgstr ""

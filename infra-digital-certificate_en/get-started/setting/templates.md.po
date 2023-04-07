@@ -1,3 +1,35 @@
 #
 msgid ""
 msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 1 (header)
+msgid "VC/VP 템플릿 설정"
+msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 2
+#: (paragraph)
+msgid "서비스 사용자에게 발급할 VC와 제출을 요구할 VP의 양식(Template)를 설정합니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 3 (header)
+msgid "VC Template"
+msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 4
+#: (unordered list)
+msgid "서비스 사용자에게 발급할 VC의 종류와 이에 포함될 주장(Claim)들을 설정합니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 5 (header)
+msgid "VP Template"
+msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 6
+#: (unordered list)
+msgid "서비스 사용자에게 제출을 요청할 VP의 종류와 이에 포함될 제출할 VC종류(및 주장)들을 설정합니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/setting/templates.md:block 7
+#: (paragraph)
+msgid "다음으로 서비스를 연동하여 서비스 사용자에게 VC 발급을 해보겠습니다."
+msgstr ""

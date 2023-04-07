@@ -53,4 +53,3 @@ msgstr ""
 #: infra-digital-certificate/introduction/vc.md:block 2 (unordered list)
 msgid "VC는 [검증가능한 자격증명](https://www.w3.org/TR/vc-data-model/)의 약자입니다."
 msgstr ""
-

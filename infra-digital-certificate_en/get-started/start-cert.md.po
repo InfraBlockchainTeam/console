@@ -5,3 +5,12 @@ msgstr ""
 #: infra-digital-certificate/get-started/start-cert.md:block 1 (header)
 msgid "Cert 서비스 시작하기"
 msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert.md:block 2 (unordered
+#: list)
+msgid "Infrablockchain Certificate(이하 Cert 서비스)를 이용하기 위해서는 아래의 과정이 필요합니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/start-cert.md:block 3 (paragraph)
+msgid "먼저, 키 생성부터 시작합니다."
+msgstr ""
