@@ -12,7 +12,7 @@
 
   - [DID Token](introduction/did-token.md)
 
-- [시작하](get-started.md)
+- [시작하기](get-started.md)
 
   - [회원가입](get-started/signin.md)
 
