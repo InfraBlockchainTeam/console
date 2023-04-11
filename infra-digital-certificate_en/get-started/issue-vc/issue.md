@@ -13,7 +13,7 @@
 
 ### 콜백 샘플
 
-- Cert 서버는 아래와 같은 request data를 전달하며, 서버는 이를 확인 한 후 response data 에 맞도록 응답을 전달합니다. {% swagger src=".gitbook/assets/sample_2.json" path="/v1/vcs/requests/callback" method="post" %} [sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}
+- Cert 서버는 아래와 같은 request data를 전달하며, 서버는 이를 확인 한 후 response data 에 맞도록 응답을 전달합니다. {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/callback" method="post" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}
 - 콜백에 의한 서비스 제공자의 발급 결정은 발급/거절/보류(pendding)이 있습니다.
    - 보류인 경우 자동 발급/거절이 되지 않고 이후 콘솔이나 API를 이용하여 서비스 제공자가 발급결정을 합니다.
    - 콜백이 정상적으로 요청/응답되지 않으면 Cert 서버는 Holder에게 보류 응답을 전달합니다.
@@ -24,9 +24,9 @@
 
 ### API를 이용한 조회 / 결정
 
-- 요청 받은 전체 내역 {% swagger src=".gitbook/assets/sample_2.json" path="/v1/vcs/requests" method="get" %} [sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}
-- 요청 식별자를 통한 상세 조회 {% swagger src=".gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="get" %} [sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}
-- Cert 서버에 VC 발급 결정 전달 {% swagger src=".gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="post" %} [sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}
+- 요청 받은 전체 내역 {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/requests" method="get" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}
+- 요청 식별자를 통한 상세 조회 {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="get" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}
+- Cert 서버에 VC 발급 결정 전달 {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/requests/{id}" method="post" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}
 
 ### 주의점
 

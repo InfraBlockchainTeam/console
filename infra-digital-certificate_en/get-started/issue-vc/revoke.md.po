@@ -21,10 +21,16 @@ msgstr ""
 #: infra-digital-certificate/get-started/issue-vc/revoke.md:block 3
 #: (paragraph)
 msgid ""
-"{% swagger src=\".gitbook/assets/sample_2.json\" "
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
 "path=\"/v1/vcs/revoke/{id}\" method=\"post\" %} "
-"[sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}"
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
 msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\".gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vcs/revoke/{id}\" method=\"post\" %} "
+#~ "[sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "

@@ -10,156 +10,264 @@ msgstr ""
 msgid "VP Templates"
 msgstr ""
 
-#: infra-digital-certificate/guide/api-reference/verify.md:block 3 (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/settings/templates/vps\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 4 (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/settings/templates/vps\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 5 (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/settings/templates/vps/{id}\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 6 (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/settings/templates/vps/{id}\" method=\"patch\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 7 (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/settings/templates/vps/{id}\" method=\"delete\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
 #: infra-digital-certificate/guide/api-reference/verify.md:block 8 (header)
 msgid "VP Submit Request"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 9 (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vps/requests\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 10
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vps/requests\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 11
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vps/requests/{id}\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 12
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vps/requests/{id}\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 13
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vps/requests/{id}\" method=\"delete\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
 msgstr ""
 
 #: infra-digital-certificate/guide/api-reference/verify.md:block 14 (header)
 msgid "VPS"
 msgstr ""
 
-#: infra-digital-certificate/guide/api-reference/verify.md:block 15
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps/did-"
-"connections\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 16
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps/verify\" "
-"method=\"post\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
-"endswagger %}"
-msgstr ""
-
 #: infra-digital-certificate/guide/api-reference/verify.md:block 17 (header)
 msgid "VP history"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 18
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps\" "
-"method=\"get\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
-"endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 19
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps\" "
-"method=\"post\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
-"endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/guide/api-reference/verify.md:block 20
-#: (paragraph)
-msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps/{id}\" "
-"method=\"get\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
-"endswagger %}"
 msgstr ""
 
 #: infra-digital-certificate/guide/api-reference/verify.md:block 21 (header)
 msgid "Callbacks"
 msgstr ""
 
+#: infra-digital-certificate/guide/api-reference/verify.md:block 3 (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/settings/templates/vps\" method=\"get\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 4 (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/settings/templates/vps\" method=\"post\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 5 (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/settings/templates/vps/{id}\" method=\"get\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 6 (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/settings/templates/vps/{id}\" method=\"patch\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 7 (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/settings/templates/vps/{id}\" method=\"delete\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 9 (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/vps/requests\" method=\"get\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 10
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/vps/requests\" method=\"post\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 11
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/vps/requests/{id}\" method=\"get\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 12
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/vps/requests/{id}\" method=\"post\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 13
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/vps/requests/{id}\" method=\"delete\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 15
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" path=\"/v1/vps/did-"
+"connections\" method=\"post\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 16
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
+"path=\"/v1/vps/verify\" method=\"post\" %} "
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 18
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" path=\"/v1/vps\" "
+"method=\"get\" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% "
+"endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 19
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" path=\"/v1/vps\" "
+"method=\"post\" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% "
+"endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/guide/api-reference/verify.md:block 20
+#: (paragraph)
+msgid ""
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" path=\"/v1/vps/{id}\""
+" method=\"get\" %} [sample_2.json](../../.gitbook/assets/sample_2.json) {% "
+"endswagger %}"
+msgstr ""
+
 #: infra-digital-certificate/guide/api-reference/verify.md:block 22
 #: (paragraph)
 msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
 "path=\"/v1/settings/callbacks/vp-submits\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
 msgstr ""
 
 #: infra-digital-certificate/guide/api-reference/verify.md:block 23
 #: (paragraph)
 msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
 "path=\"/v1/settings/callbacks/vp-submits\" method=\"patch\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
 msgstr ""
 
 #: infra-digital-certificate/guide/api-reference/verify.md:block 24
 #: (paragraph)
 msgid ""
-"{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+"{% swagger src=\"../../.gitbook/assets/sample_2.json\" "
 "path=\"/v1/vps/requests/callback\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+"[sample_2.json](../../.gitbook/assets/sample_2.json) {% endswagger %}"
 msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/templates/vps\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/templates/vps\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/templates/vps/{id}\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/templates/vps/{id}\" method=\"patch\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/templates/vps/{id}\" method=\"delete\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vps/requests\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vps/requests\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vps/requests/{id}\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vps/requests/{id}\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vps/requests/{id}\" method=\"delete\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps/did-"
+#~ "connections\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps/verify\" "
+#~ "method=\"post\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
+#~ "endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps\" "
+#~ "method=\"get\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
+#~ "endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps\" "
+#~ "method=\"post\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
+#~ "endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" path=\"/v1/vps/{id}\" "
+#~ "method=\"get\" %} [sample_2.json](../.gitbook/assets/sample_2.json) {% "
+#~ "endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/callbacks/vp-submits\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/settings/callbacks/vp-submits\" method=\"patch\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vps/requests/callback\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
