@@ -28,75 +28,75 @@ msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[회원가입](get-started/signin.md)"
-msgstr "Sign In"
+msgstr "[Sign In](get-started/signin.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[Cert 서비스 시작](get-started/start-cert.md)"
-msgstr "Start certificate service"
+msgstr "[Start certificate service](get-started/start-cert.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[조직 등록](get-started/start-cert/register-org.md)"
-msgstr "Register organization"
+msgstr "[Register organization](get-started/start-cert/register-org.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[인스턴스 생성](get-started/start-cert/instance.md)"
-msgstr "Create a new instance"
+msgstr "[Create a new instance](get-started/start-cert/instance.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[서비스 연동 및 설정](get-started/setting.md)"
-msgstr "Service setting"
+msgstr "[Service setting](get-started/setting.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[Callback URL 설정](get-started/setting/callbacks.md)"
-msgstr "Set callback URL"
+msgstr "[Set callback URL](get-started/setting/callbacks.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VC/VP 템플릿 설정](get-started/setting/templates.md)"
-msgstr "Set VC/VP templates"
+msgstr "[Set VC/VP templates](get-started/setting/templates.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VC 발급](get-started/issue-vc.md)"
-msgstr "VC issue"
+msgstr "[VC issue](get-started/issue-vc.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[발급 요청](get-started/issue-vc/request.md)"
-msgstr "Request VC issuance"
+msgstr "[Request VC issuance](get-started/issue-vc/request.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[발급 처리](get-started/issue-vc/issue.md)"
-msgstr "VC issue"
+msgstr "[VC issue](get-started/issue-vc/issue.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[발급 내역 조회](get-started/issue-vc/history.md)"
-msgstr "VC issuance history"
+msgstr "[VC issuance history](get-started/issue-vc/history.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VC 폐기](get-started/issue-vc/revoke.md)"
-msgstr "VC revoke"
+msgstr "[VC revoke](get-started/issue-vc/revoke.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VP 검증](get-started/verify-vp.md)"
-msgstr "VP verify"
+msgstr "[VP verify](get-started/verify-vp.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[DID 연결](get-started/verify-vp/connection.md)"
-msgstr "DID connection"
+msgstr "[DID connection](get-started/verify-vp/connection.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VP 제출](get-started/verify-vp/submit.md)"
-msgstr "VP submit"
+msgstr "[VP submit](get-started/verify-vp/submit.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VP 검증](get-started/verify-vp/verify.md)"
-msgstr "VP verify"
+msgstr "[VP verify](get-started/verify-vp/verify.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[VP 검증 이력 조회](get-started/verify-vp/history.md)"
-msgstr "VP verify history"
+msgstr "[VP verify history](get-started/verify-vp/history.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[SSO 로그인 구축](get-started/sso.md)"
-msgstr "Build SSO"
+msgstr "[Build SSO](get-started/sso.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[API reference](guide/api-reference.md)"
@@ -120,20 +120,20 @@ msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[안내](README.md)"
-msgstr "Instructions"
+msgstr "[Instructions](README.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[키 생성 및 등록](get-started/start-cert/generate-key.md)"
-msgstr "Create and register key"
+msgstr "[Create and register key](get-started/start-cert/generate-key.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[IWS 콘솔](guide/console.md)"
-msgstr "IWS Console"
+msgstr "[IWS Console](guide/console.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[시작하기](get-started.md)"
-msgstr "Get Started"
+msgstr "[Get Started](get-started.md)"
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[가이드](guide.md)"
-msgstr "Guide"
+msgstr "[Guide](guide.md)"
