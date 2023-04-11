@@ -127,16 +127,19 @@ msgid "[안내](README.md)"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
-msgid "[시작하](get-started.md)"
-msgstr ""
-
-#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[키 생성 및 등록](get-started/start-cert/generate-key.md)"
 msgstr ""
 
 #: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
 msgid "[IWS 콘솔](guide/console.md)"
 msgstr ""
+
+#: infra-digital-certificate/SUMMARY.md:block 2 (unordered list)
+msgid "[시작하기](get-started.md)"
+msgstr ""
+
+#~ msgid "[시작하](get-started.md)"
+#~ msgstr ""
 
 #~ msgid "[Introduction](README.md)"
 #~ msgstr ""

@@ -26,4 +26,3 @@ msgstr ""
 #: (paragraph)
 msgid "다음으로 VC 발급 기관을 등록합니다."
 msgstr ""
-

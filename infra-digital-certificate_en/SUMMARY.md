@@ -6,7 +6,7 @@
    - [VP](introduction/vp.md)
       - [InfraDID Communication Protocol(ICP)](introduction/icp.md)
    - [DID Token](introduction/did-token.md)
-- [시작하](get-started.md)
+- [시작하기](get-started.md)
    - [회원가입](get-started/signin.md)
    - [Cert 서비스 시작](get-started/start-cert.md)
       - [키 생성 및 등록](get-started/start-cert/generate-key.md)
