@@ -52,7 +52,7 @@
 
   - [SSO 로그인 구축](get-started/sso.md)
 
-- [Guide](guide.md)
+- [가이드](guide.md)
 
   - [IWS 콘솔](guide/console.md)
 

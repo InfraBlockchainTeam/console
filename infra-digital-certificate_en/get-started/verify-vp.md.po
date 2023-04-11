@@ -1,3 +1,38 @@
 #
 msgid ""
 msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 1 (header)
+msgid "VP 검증"
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid "VP 검증은 아래와 같은 흐름으로 진행됩니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid "검증자(Verifier)와 서비스 사용자(Holder)의 DID 연결(DID Connection)"
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid "검증자가 서비스 사용자에게 VP제출을 요청"
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid "서비스 사용자가 VP를 제출"
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid "검증자가 VP를 검증 및 이력 저장"
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid ""
+"기본적으로 검증자와 사용자의 연결과 VP 제출 요청과 VP제출은 SDK를 이용한 Websocket 채널을 이용하여 이루어집니다."
+msgstr ""
+
+#: infra-digital-certificate/get-started/verify-vp.md:block 2 (unordered list)
+msgid ""
+"또한 VP 검증이력에 대해서는 Cert 서버에 저장하여 상세 이력을 조회할 수 있습니다. 먼저 검증자와 서비스 사용자의 DID 연결을 "
+"살펴봅니다."
+msgstr ""

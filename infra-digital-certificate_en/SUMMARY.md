@@ -26,7 +26,7 @@
       - [VP 검증](get-started/verify-vp/verify.md)
       - [VP 검증 이력 조회](get-started/verify-vp/history.md)
    - [SSO 로그인 구축](get-started/sso.md)
-- [Guide](guide.md)
+- [가이드](guide.md)
    - [IWS 콘솔](guide/console.md)
    - [API reference](guide/api-reference.md)
       - [Issue API](guide/api-reference/issue.md)
