@@ -6,12 +6,12 @@
 - 먼저 서비스 제공앱에는 발급 요청을 할 VC의 템플릿을 조회하고 이를 발급요청을 하는 API 통신 로직이 구현되어야 합니다.
 - 아직 사용제 제공 앱이 준비 되지 않았다면 우선 SDK{링크}를 통해 사용자의 DID를 발급 받고 아래 Rest API를 통해 테스트 해볼 수 있습니다.
 
-1.  {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs" method="get" %}
-    [sample_2.json](../../.gitbook/assets/sample_2.json)
+1.  {% swagger src="/.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs" method="get" %}
+    [sample_2.json](/.gitbook/assets/sample_2.json)
     {% endswagger %}
 
-2.  {% swagger src="/.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs/{id}" method="get" %}
-    [sample_2.json](/.gitbook/assets/sample_2.json)
+2.  {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/settings/templates/vcs/{id}" method="get" %}
+    [sample_2.json](../../.gitbook/assets/sample_2.json)
     {% endswagger %}
 
 3.  {% swagger src=".gitbook/assets/sample_2.json" path="/v1/vcs/requests" method="post" %}
