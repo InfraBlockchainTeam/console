@@ -51,15 +51,6 @@ msgstr ""
 
 #: infra-digital-certificate/get-started/issue-vc/issue.md:block 7 (unordered
 #: list)
-msgid ""
-"Cert 서버는 아래와 같은 request data를 전달하며, 서버는 이를 확인 한 후 response data 에 맞도록 응답을 "
-"전달합니다. {% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vcs/requests/callback\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/get-started/issue-vc/issue.md:block 7 (unordered
-#: list)
 msgid "콜백에 의한 서비스 제공자의 발급 결정은 발급/거절/보류(pendding)이 있습니다."
 msgstr ""
 
@@ -83,30 +74,6 @@ msgstr ""
 
 #: infra-digital-certificate/get-started/issue-vc/issue.md:block 10 (header)
 msgid "API를 이용한 조회 / 결정"
-msgstr ""
-
-#: infra-digital-certificate/get-started/issue-vc/issue.md:block 11 (unordered
-#: list)
-msgid ""
-"요청 받은 전체 내역 {% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vcs/requests\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/get-started/issue-vc/issue.md:block 11 (unordered
-#: list)
-msgid ""
-"요청 식별자를 통한 상세 조회 {% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vcs/requests/{id}\" method=\"get\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
-msgstr ""
-
-#: infra-digital-certificate/get-started/issue-vc/issue.md:block 11 (unordered
-#: list)
-msgid ""
-"Cert 서버에 VC 발급 결정 전달 {% swagger src=\"../.gitbook/assets/sample_2.json\" "
-"path=\"/v1/vcs/requests/{id}\" method=\"post\" %} "
-"[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
 msgstr ""
 
 #: infra-digital-certificate/get-started/issue-vc/issue.md:block 12 (header)
@@ -168,3 +135,61 @@ msgid ""
 "{not Fixed} VC 전체 데이터는 기본적으로 1회만 전달 받을 수 있습니다. 다시 제공하거나 반복 제공하기 위해서 설정을 변경 할"
 " 수 있습니다???"
 msgstr ""
+
+#: infra-digital-certificate/get-started/issue-vc/issue.md:block 7 (unordered
+#: list)
+msgid ""
+"Cert 서버는 아래와 같은 request data를 전달하며, 서버는 이를 확인 한 후 response data 에 맞도록 응답을 "
+"전달합니다. {% swagger src=\".gitbook/assets/sample_2.json\" "
+"path=\"/v1/vcs/requests/callback\" method=\"post\" %} "
+"[sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/get-started/issue-vc/issue.md:block 11 (unordered
+#: list)
+msgid ""
+"요청 받은 전체 내역 {% swagger src=\".gitbook/assets/sample_2.json\" "
+"path=\"/v1/vcs/requests\" method=\"get\" %} "
+"[sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/get-started/issue-vc/issue.md:block 11 (unordered
+#: list)
+msgid ""
+"요청 식별자를 통한 상세 조회 {% swagger src=\".gitbook/assets/sample_2.json\" "
+"path=\"/v1/vcs/requests/{id}\" method=\"get\" %} "
+"[sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#: infra-digital-certificate/get-started/issue-vc/issue.md:block 11 (unordered
+#: list)
+msgid ""
+"Cert 서버에 VC 발급 결정 전달 {% swagger src=\".gitbook/assets/sample_2.json\" "
+"path=\"/v1/vcs/requests/{id}\" method=\"post\" %} "
+"[sample_2.json](.gitbook/assets/sample_2.json) {% endswagger %}"
+msgstr ""
+
+#~ msgid ""
+#~ "Cert 서버는 아래와 같은 request data를 전달하며, 서버는 이를 확인 한 후 response data 에 맞도록 응답을 "
+#~ "전달합니다. {% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vcs/requests/callback\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "요청 받은 전체 내역 {% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vcs/requests\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "요청 식별자를 통한 상세 조회 {% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vcs/requests/{id}\" method=\"get\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Cert 서버에 VC 발급 결정 전달 {% swagger src=\"../.gitbook/assets/sample_2.json\" "
+#~ "path=\"/v1/vcs/requests/{id}\" method=\"post\" %} "
+#~ "[sample_2.json](../.gitbook/assets/sample_2.json) {% endswagger %}"
+#~ msgstr ""

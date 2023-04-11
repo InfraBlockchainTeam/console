@@ -1,4 +1,5 @@
 #!/bin/sh
+
 if [ $# -ne 1 ] ; then
     echo "it shoul provied arg package path(ex: \$test.sh infra-digital-certificate)"
     exit
@@ -28,8 +29,9 @@ do
     PATH="${PATH[@]:1}"
     PATH=${PATH//" "/"/"}
     NAME=${arr[len-1]}
-    # echo for::: ${P} 
     /opt/homebrew/bin/md2po2md -l en -o "${TPATH}_{lang}/${PATH}" --po-wrapwidth 0 --md-wrapwidth 0 "${FPATH}*.md"
+    # /opt/homebrew/bin/md2po2md -l en --po-wrapwidth inf --mdwrapwidth inf -o "infra-digital-certificate_{lang}/get-started/setting" "infra-digital-certificate/get-started/setting/*.md"
 done 
 
-# /opt/homebrew/bin/md2po2md -l en --po-wrapwidth inf --mdwrapwidth inf -o "infra-digital-certificate_{lang}/get-started/setting" "infra-digital-certificate/get-started/setting/*.md"
+echo cp -r ./${TPATH}/.gitbook ./${TPATH}_en/.gitbook
+cp -r ./${TPATH}/.gitbook ./${TPATH}_en/.gitbook
