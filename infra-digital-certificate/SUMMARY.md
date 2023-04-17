@@ -50,9 +50,7 @@
 
   - [VP 검증](get-started/verify-vp.md)
 
-    - [검증 흐름](get-started/verify-vp/verify-flow.md)
-
-    - [DID 연결](get-started/verify-vp/connection.md)
+    - [DID 연결 및 요청](get-started/verify-vp/connection.md)
 
     - [VP 제출](get-started/verify-vp/submit.md)
 

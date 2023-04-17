@@ -78,7 +78,7 @@ else (4,5) Verifier/CertServer(Dynamic QR) -> Holder(scan)
 	ws--)h: Connected<br>(socketId)
   note over h,cs: Verifier/CertServer-Holder WS connected. DID auth & DID connected
 end
-note over h,ss: Go to Step 2
+note over h,cs: Go to Step 2
 ```
 
 ### REST API를 이용한 연결
