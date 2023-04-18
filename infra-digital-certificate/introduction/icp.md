@@ -4,7 +4,7 @@
 
 - Diffie-Hellman 알고리즘을 통한 키 교환 과정을 포함하며, DID Connection이 이루어진 이후 DID간 메세지들은 공유된 비밀키(DID-Shared-Secret-Key)를 사용하여 상호 암호화 통신을 하도록 합니다.
 
-- Holder, Verifier 간 통신채널을 제공하는 Websocket Channel (Message Forwarder)은 어떤 DID가 통신 중인지 DID간 어떤 메세지를 전송하는지 원천적으로 알수 없습니다.
+- Holder, Verifier 간 통신채널을 제공하는 WebSocket Channel (Message Forwarder)은 어떤 DID가 통신 중인지 DID간 어떤 메세지를 전송하는지 원천적으로 알수 없습니다.
 
 - DID Connection 단계를 완료한 이후, 비밀 통신 웹소켓 채널을 통해 이후의 로직들을 수행하도록 합니다.
 
