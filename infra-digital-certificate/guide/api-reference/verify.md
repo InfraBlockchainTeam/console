@@ -24,7 +24,11 @@
 
 ## VP Submit Request
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests" method="get" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests/static" method="post" %}
+[sample_2.json](../../.gitbook/assets/sample_2.json)
+{% endswagger %}
+
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests/dynamic" method="post" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -32,11 +36,11 @@
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests/{id}" method="get" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests" method="get" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests/{id}" method="post" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests/{id}" method="get" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -44,9 +48,19 @@
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
+## DID Connections
+
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/connections/static/{requestId}" method="post" %}
+[sample_2.json](../../.gitbook/assets/sample_2.json)
+{% endswagger %}
+
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/connections/dynamic" method="post" %}
+[sample_2.json](../../.gitbook/assets/sample_2.json)
+{% endswagger %}
+
 ## VPS
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/did-connections" method="post" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/submit/{requestId}" method="post" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -56,15 +70,15 @@
 
 ## VP history
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps" method="get" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/history" method="get" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps" method="post" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/history" method="post" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/{id}" method="get" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/history/{historyId}" method="get" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
@@ -78,6 +92,6 @@
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/requests/callback" method="post" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/settings/callbacks/vp-submits/callback-sample" method="post" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
