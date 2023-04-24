@@ -28,7 +28,7 @@
             "content": { "application/json": { "schema": { "$ref": "#/components/schemas/DIDToken" } } }
           }
         },
-        "tags": ["sample Token"]
+        "tags": ["Sample Token"]
       }
     },
     "/v1/settings/callbacks/vc-requests": {
@@ -182,7 +182,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"],
+        "tags": ["VC Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
@@ -211,7 +211,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"],
+        "tags": ["VC Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
@@ -247,7 +247,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"],
+        "tags": ["VC Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "patch": {
@@ -275,7 +275,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"],
+        "tags": ["VC Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "delete": {
@@ -299,7 +299,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VC templates"],
+        "tags": ["VC Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
@@ -341,7 +341,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"],
+        "tags": ["VP Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "post": {
@@ -370,7 +370,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"],
+        "tags": ["VP Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
@@ -406,7 +406,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"],
+        "tags": ["VP Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "patch": {
@@ -434,7 +434,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"],
+        "tags": ["VP Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "delete": {
@@ -458,7 +458,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VP templates"],
+        "tags": ["VP Templates"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
@@ -667,9 +667,9 @@
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
-    "/v1/vcs": {
+    "/v1/vcs/history": {
       "get": {
-        "operationId": "VCController_getIssuedVCList",
+        "operationId": "VCHistoryController_getIssuedVCList",
         "summary": "Get Issued VC List",
         "description": "발급된 VC의 목록을 조회합니다. Holder의 DID(issuer) 혹은 VC의 타입으로 검색하여 가져올 수도 있습니다.\n\n        holder: 자신이 발급받은 VC 목록\n\n        issuer: 자신이 발급한 VC 목록",
         "parameters": [
@@ -707,13 +707,13 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VCS"],
+        "tags": ["VC Issuance History"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
-    "/v1/vcs/{id}": {
+    "/v1/vcs/history/{id}": {
       "get": {
-        "operationId": "VCController_getIssuedVC",
+        "operationId": "VCHistoryController_getIssuedVC",
         "summary": "Get Issued VC",
         "description": "지정한 식별자를 통해 발급된 VC의 상세 정보를 조회합니다.\n\n        holder: 자신이 발급받은 VC\n\n        issuer: 자신이 발급한 VC",
         "parameters": [
@@ -743,13 +743,13 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VCS"],
+        "tags": ["VC Issuance History"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vcs/revoke/{id}": {
       "post": {
-        "operationId": "VCController_revokeIssuedVC",
+        "operationId": "VCRevokeController_revokeIssuedVC",
         "summary": "Revoke Issued VC",
         "description": "issuer: 지정한 식별자에 해당하는 VC를 폐기(revoke) 합니다.",
         "parameters": [
@@ -769,7 +769,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VCS"],
+        "tags": ["VC Revocation"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
@@ -984,7 +984,7 @@
     },
     "/v1/vps/submit/{requestId}": {
       "post": {
-        "operationId": "VPController_didConnection",
+        "operationId": "VPSubmitController_didConnection",
         "summary": "VP Submit",
         "description": "holder: VP 제출요청 건에 맞는 VP를 제출합니다.",
         "parameters": [
@@ -1018,13 +1018,88 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"],
+        "tags": ["VP Submission"],
+        "security": [{ "defaultBearerAuth": [] }]
+      }
+    },
+    "/v1/vps/verify/static/{requestId}": {
+      "post": {
+        "operationId": "VPVerifyController_staticDIDConnection",
+        "summary": "Static DID Connection",
+        "description": "holder: Static QR을 스캔하여 웹소켓 채널을 생성, 연결한 후 호출하여 웹소켓 연결 및 VP제출 프로세스를 진행을 요청합니다. ",
+        "parameters": [
+          {
+            "name": "requestId",
+            "required": true,
+            "in": "path",
+            "description": "연결할 VP제출 요청 ",
+            "example": "123a1766-v3ad-46vg-8d0d-95412370b8gde",
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/VerifyVPStaticRequestBodyDTO" } }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "$ref": "#/components/schemas/VerifyVPResponseDTO" } }
+                }
+              }
+            }
+          },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
+        },
+        "tags": ["VP Verification"],
+        "security": [{ "defaultBearerAuth": [] }]
+      }
+    },
+    "/v1/vps/verify/dynamic": {
+      "post": {
+        "operationId": "VPVerifyController_dynamicDIDConnection",
+        "summary": "Dynamic DID Connection",
+        "description": "verifier: holder의 dynamic QR 스캔데이터를 전달하여 웹소켓 연결 및 VP제출 프로세스를 진행을 요청합니다.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/VerifyVPDynamicRequestBodyDTO" } }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "result": { "$ref": "#/components/schemas/VerifyVPResponseDTO" } }
+                }
+              }
+            }
+          },
+          "400": { "description": "The request is not valid" },
+          "401": { "description": "Authentication failed" },
+          "403": { "description": "The server understands the request but refuses to authorize it." },
+          "500": { "description": "An unexpected error occurred inside the server" }
+        },
+        "tags": ["VP Verification"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/verify": {
       "post": {
-        "operationId": "VPController_verifyVP",
+        "operationId": "VPVerifyController_verifyVP",
         "summary": "VP Verify",
         "description": "verifier: 제출 받은 VP를 검증합니다.",
         "parameters": [],
@@ -1049,13 +1124,13 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"],
+        "tags": ["VP Verification"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/history/{historyId}": {
       "get": {
-        "operationId": "VPController_getVPVerificationHistory",
+        "operationId": "VPHistoryController_getVPVerificationHistory",
         "summary": "Get VP Verify History",
         "description": "지정한 식별자를 통해 VP 검증 기록의 상세 정보를 조회합니다.\n\n        holder: 자신이 제출한 VP\n\n        verifier: 자신이 검증(제출요청한) VP",
         "parameters": [
@@ -1085,13 +1160,13 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"],
+        "tags": ["VP Verification History"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     },
     "/v1/vps/history": {
       "post": {
-        "operationId": "VPController_createVPVerifyHistory",
+        "operationId": "VPHistoryController_createVPVerifyHistory",
         "summary": "Create VP Verify Histroy",
         "description": "verifier: 직접 검증한 VP의 결과를 서버에 저장합니다.",
         "parameters": [],
@@ -1118,11 +1193,11 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"],
+        "tags": ["VP Verification History"],
         "security": [{ "defaultBearerAuth": [] }]
       },
       "get": {
-        "operationId": "VPController_getVPVerificationHistories",
+        "operationId": "VPHistoryController_getVPVerificationHistories",
         "summary": "Get VP Verify Histories",
         "description": "VP 검증 기록의 목록을 가져옵니다. holder(검증 대상자)의 DID, 검증결과 그리고 제출(검증/생성)날짜로 검색하여 가져올 수도 있습니다. \n\n        holder: 자신이 제출한 VP 목록\n\n        verifier: 자신이 검증(제출요청한) VP 목록",
         "parameters": [
@@ -1168,82 +1243,7 @@
           "403": { "description": "The server understands the request but refuses to authorize it." },
           "500": { "description": "An unexpected error occurred inside the server" }
         },
-        "tags": ["VPS"],
-        "security": [{ "defaultBearerAuth": [] }]
-      }
-    },
-    "/v1/vps/connections/static/{requestId}": {
-      "post": {
-        "operationId": "VPConnectionController_staticDIDConnection",
-        "summary": "Static DID Connection",
-        "description": "holder: Static QR을 스캔하여 웹소켓 채널을 생성, 연결한 후 호출하여 웹소켓 연결 및 VP제출 프로세스를 진행합니다. ",
-        "parameters": [
-          {
-            "name": "requestId",
-            "required": true,
-            "in": "path",
-            "description": "연결할 VP제출 요청 ",
-            "example": "123a1766-v3ad-46vg-8d0d-95412370b8gde",
-            "schema": { "type": "string" }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": { "schema": { "$ref": "#/components/schemas/StaticConnectionRequestBodyDTO" } }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The request was successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": { "result": { "$ref": "#/components/schemas/ConnectionResponseDTO" } }
-                }
-              }
-            }
-          },
-          "400": { "description": "The request is not valid" },
-          "401": { "description": "Authentication failed" },
-          "403": { "description": "The server understands the request but refuses to authorize it." },
-          "500": { "description": "An unexpected error occurred inside the server" }
-        },
-        "tags": ["VP DID Connections"],
-        "security": [{ "defaultBearerAuth": [] }]
-      }
-    },
-    "/v1/vps/connections/dynamic": {
-      "post": {
-        "operationId": "VPConnectionController_dynamicDIDConnection",
-        "summary": "Dynamic DID Connection",
-        "description": "verifier: holder의 dynamic QR 스캔데이터를 전달하여 웹소켓 연결 및 VP제출 프로세스를 진행을 요청합니다.",
-        "parameters": [],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": { "schema": { "$ref": "#/components/schemas/DynamicConnectionRequestBodyDTO" } }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The request was successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": { "result": { "$ref": "#/components/schemas/ConnectionResponseDTO" } }
-                }
-              }
-            }
-          },
-          "400": { "description": "The request is not valid" },
-          "401": { "description": "Authentication failed" },
-          "403": { "description": "The server understands the request but refuses to authorize it." },
-          "500": { "description": "An unexpected error occurred inside the server" }
-        },
-        "tags": ["VP DID Connections"],
+        "tags": ["VP Verification History"],
         "security": [{ "defaultBearerAuth": [] }]
       }
     }
@@ -2508,9 +2508,145 @@
             "description": "VP 내역 식별자",
             "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
           },
-          "verifyResult": { "type": "boolean", "description": "VP 검증 결과", "example": true }
+          "verifyResult": { "type": "boolean", "description": "검증결과", "example": "true" },
+          "vp": {
+            "description": "제출된 VP",
+            "example": {
+              "@context": ["https://www.w3.org/2018/credentials/v1", "https://www.w3.org/2018/credentials/examples/v1"],
+              "verifiableCredential": [
+                {
+                  "@context": ["https://www.w3.org/2018/credentials/v1", "https://schema.org"],
+                  "id": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U",
+                  "type": ["VerifiableCredential", "VaccinationCredential"],
+                  "credentialSubject": [
+                    {
+                      "id": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv",
+                      "alumniOf": "Example University",
+                      "email": "test@test.com"
+                    }
+                  ],
+                  "issuanceDate": "2023-03-31T06:18:12.024Z",
+                  "proof": {
+                    "type": "Sr25519Signature2020",
+                    "created": "2023-03-31T06:18:12Z",
+                    "verificationMethod": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L#keys-1",
+                    "proofPurpose": "assertionMethod",
+                    "proofValue": "z3ghAy9doGDBgsfvXQnW6EER8KNV5AYhuwBT7B5MWddvQQougnHiVTFqWBeVMMEeKiAXA5izdmNZYNdHEm5FAebS2"
+                  },
+                  "issuer": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L"
+                }
+              ],
+              "id": "http://example.edu/credentials/2803",
+              "type": ["VerifiablePresentation", "CredentialManagerPresentation"],
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2023-03-31T06:18:24Z",
+                "verificationMethod": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv#keys-1",
+                "proofPurpose": "authentication",
+                "challenge": "0xcbf491396cc65b383185b366ecb659f98a1b0be6c142eea6c5f2adee11c2a83f",
+                "domain": "example domain",
+                "proofValue": "z3gXMiYRgq45Pp2nQ33fvVwgxQHUYnNgRwzEW4LC8efi43vjdkNgyYFwwR4kQYuB4QBgcKktYqJZqAi7UMHnHgq1F"
+              },
+              "holder": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv"
+            },
+            "allOf": [{ "$ref": "#/components/schemas/VPjsonld" }]
+          }
         },
-        "required": ["historyId", "verifyResult"]
+        "required": ["historyId", "verifyResult", "vp"]
+      },
+      "ConnectionBodyInitiator": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "object", "description": "connection 연결 type", "example": "HOLDER" },
+          "serviceEndpoint": { "type": "string", "description": "service endpoint", "example": "wss//ws.pet-i.net" },
+          "socketId": { "type": "string", "description": "socket id", "example": "12/Ph3SXvXZKCWQFoiwO5Qp" }
+        },
+        "required": ["type", "serviceEndpoint", "socketId"]
+      },
+      "ConnectionBody": {
+        "type": "object",
+        "properties": {
+          "initiator": {
+            "description": "연결 initiator",
+            "allOf": [{ "$ref": "#/components/schemas/ConnectionBodyInitiator" }]
+          },
+          "context": {
+            "description": "연결을 위한 Action Context",
+            "allOf": [{ "$ref": "#/components/schemas/ActionContext" }]
+          }
+        },
+        "required": ["initiator", "context"]
+      },
+      "VerifyVPStaticRequestBodyDTO": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "description": "dynamic connection JWM type", "example": "DIDConnectReq" },
+          "from": {
+            "type": "string",
+            "description": "dynamic connection JWM 요청자",
+            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSREV9"
+          },
+          "created_time": {
+            "type": "number",
+            "description": "dynamic connection JWM 생성일시(timestamp)",
+            "example": 1662441420
+          },
+          "expires_time": {
+            "type": "number",
+            "description": "dynamic connection JWM 만료일시(timestamp)",
+            "example": 1662441480
+          },
+          "body": { "description": "connecntion body", "allOf": [{ "$ref": "#/components/schemas/ConnectionBody" }] }
+        },
+        "required": ["type", "from", "created_time", "expires_time", "body"]
+      },
+      "JWMMessage": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "description": "dynamic connection JWM type", "example": "DIDConnectReq" },
+          "from": {
+            "type": "string",
+            "description": "dynamic connection JWM 요청자",
+            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSREV9"
+          },
+          "created_time": {
+            "type": "number",
+            "description": "dynamic connection JWM 생성일시(timestamp)",
+            "example": 1662441420
+          },
+          "expires_time": {
+            "type": "number",
+            "description": "dynamic connection JWM 만료일시(timestamp)",
+            "example": 1662441480
+          },
+          "body": { "description": "connecntion body", "allOf": [{ "$ref": "#/components/schemas/ConnectionBody" }] }
+        },
+        "required": ["type", "from", "created_time", "expires_time", "body"]
+      },
+      "VerifyVPDynamicRequestBodyDTO": {
+        "type": "object",
+        "properties": {
+          "verifierDID": {
+            "type": "string",
+            "description": "Verifier의 DID",
+            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
+          },
+          "vpTemplateId": {
+            "type": "string",
+            "description": "VP 템플릿 식별자",
+            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
+          },
+          "challenge": {
+            "type": "string",
+            "description": "holder 가 VP 생성시 포함할 challenge 검증 값",
+            "example": "SOME_CHALLENGE_VALUE"
+          },
+          "message": {
+            "description": "Dynamic connection JWM message(from holder's DynamicQR)",
+            "allOf": [{ "$ref": "#/components/schemas/JWMMessage" }]
+          }
+        },
+        "required": ["verifierDID", "vpTemplateId", "challenge", "message"]
       },
       "VerifyVPRequestDTO": {
         "type": "object",
@@ -2736,154 +2872,6 @@
           }
         },
         "required": ["submittedVPs"]
-      },
-      "ConnectionResponseDTO": {
-        "type": "object",
-        "properties": {
-          "historyId": {
-            "type": "string",
-            "description": "VP 내역 식별자",
-            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
-          },
-          "verifyResult": { "type": "boolean", "description": "검증결과", "example": "true" },
-          "vp": {
-            "description": "제출된 VP",
-            "example": {
-              "@context": ["https://www.w3.org/2018/credentials/v1", "https://www.w3.org/2018/credentials/examples/v1"],
-              "verifiableCredential": [
-                {
-                  "@context": ["https://www.w3.org/2018/credentials/v1", "https://schema.org"],
-                  "id": "did:infra:space:5FDseiC76zPek2YYkuyenu4ZgxZ7PUWXt9d19HNB5CaQXt5U",
-                  "type": ["VerifiableCredential", "VaccinationCredential"],
-                  "credentialSubject": [
-                    {
-                      "id": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv",
-                      "alumniOf": "Example University",
-                      "email": "test@test.com"
-                    }
-                  ],
-                  "issuanceDate": "2023-03-31T06:18:12.024Z",
-                  "proof": {
-                    "type": "Sr25519Signature2020",
-                    "created": "2023-03-31T06:18:12Z",
-                    "verificationMethod": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L#keys-1",
-                    "proofPurpose": "assertionMethod",
-                    "proofValue": "z3ghAy9doGDBgsfvXQnW6EER8KNV5AYhuwBT7B5MWddvQQougnHiVTFqWBeVMMEeKiAXA5izdmNZYNdHEm5FAebS2"
-                  },
-                  "issuer": "did:infra:space:5GmqRvHBtJJx7SCANAeUPrUpntaFE26jvsdsfWgsxhZezi8L"
-                }
-              ],
-              "id": "http://example.edu/credentials/2803",
-              "type": ["VerifiablePresentation", "CredentialManagerPresentation"],
-              "proof": {
-                "type": "Ed25519Signature2018",
-                "created": "2023-03-31T06:18:24Z",
-                "verificationMethod": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv#keys-1",
-                "proofPurpose": "authentication",
-                "challenge": "0xcbf491396cc65b383185b366ecb659f98a1b0be6c142eea6c5f2adee11c2a83f",
-                "domain": "example domain",
-                "proofValue": "z3gXMiYRgq45Pp2nQ33fvVwgxQHUYnNgRwzEW4LC8efi43vjdkNgyYFwwR4kQYuB4QBgcKktYqJZqAi7UMHnHgq1F"
-              },
-              "holder": "did:infra:space:5GePWpwaPDVA3q3TFHGLVK6kkNsgzaRaLU8C3ZPTSXvRgcgv"
-            },
-            "allOf": [{ "$ref": "#/components/schemas/VPjsonld" }]
-          }
-        },
-        "required": ["historyId", "verifyResult", "vp"]
-      },
-      "ConnectionBodyInitiator": {
-        "type": "object",
-        "properties": {
-          "type": { "type": "object", "description": "connection 연결 type", "example": "HOLDER" },
-          "serviceEndpoint": { "type": "string", "description": "service endpoint", "example": "wss//ws.pet-i.net" },
-          "socketId": { "type": "string", "description": "socket id", "example": "12/Ph3SXvXZKCWQFoiwO5Qp" }
-        },
-        "required": ["type", "serviceEndpoint", "socketId"]
-      },
-      "ConnectionBody": {
-        "type": "object",
-        "properties": {
-          "initiator": {
-            "description": "연결 initiator",
-            "allOf": [{ "$ref": "#/components/schemas/ConnectionBodyInitiator" }]
-          },
-          "context": {
-            "description": "연결을 위한 Action Context",
-            "allOf": [{ "$ref": "#/components/schemas/ActionContext" }]
-          }
-        },
-        "required": ["initiator", "context"]
-      },
-      "StaticConnectionRequestBodyDTO": {
-        "type": "object",
-        "properties": {
-          "type": { "type": "string", "description": "dynamic connection JWM type", "example": "DIDConnectReq" },
-          "from": {
-            "type": "string",
-            "description": "dynamic connection JWM 요청자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSREV9"
-          },
-          "created_time": {
-            "type": "number",
-            "description": "dynamic connection JWM 생성일시(timestamp)",
-            "example": 1662441420
-          },
-          "expires_time": {
-            "type": "number",
-            "description": "dynamic connection JWM 만료일시(timestamp)",
-            "example": 1662441480
-          },
-          "body": { "description": "connecntion body", "allOf": [{ "$ref": "#/components/schemas/ConnectionBody" }] }
-        },
-        "required": ["type", "from", "created_time", "expires_time", "body"]
-      },
-      "JWMMessage": {
-        "type": "object",
-        "properties": {
-          "type": { "type": "string", "description": "dynamic connection JWM type", "example": "DIDConnectReq" },
-          "from": {
-            "type": "string",
-            "description": "dynamic connection JWM 요청자",
-            "example": "did:infra:space:5GUHm8KeFXUKBR9kctm3eafs2tgqK3XxcqsnHtRp2kjSREV9"
-          },
-          "created_time": {
-            "type": "number",
-            "description": "dynamic connection JWM 생성일시(timestamp)",
-            "example": 1662441420
-          },
-          "expires_time": {
-            "type": "number",
-            "description": "dynamic connection JWM 만료일시(timestamp)",
-            "example": 1662441480
-          },
-          "body": { "description": "connecntion body", "allOf": [{ "$ref": "#/components/schemas/ConnectionBody" }] }
-        },
-        "required": ["type", "from", "created_time", "expires_time", "body"]
-      },
-      "DynamicConnectionRequestBodyDTO": {
-        "type": "object",
-        "properties": {
-          "verifierDID": {
-            "type": "string",
-            "description": "Verifier의 DID",
-            "example": "did:infra:space:5GUHmboViUqJGzjLMwkL98ZoZxPicDtwqkYrquHbSpJ9sDQH"
-          },
-          "vpTemplateId": {
-            "type": "string",
-            "description": "VP 템플릿 식별자",
-            "example": "849e1786-b4e9-407e-8d0d-86777770af8a"
-          },
-          "challenge": {
-            "type": "string",
-            "description": "holder 가 VP 생성시 포함할 challenge 검증 값",
-            "example": "SOME_CHALLENGE_VALUE"
-          },
-          "message": {
-            "description": "Dynamic connection JWM message(from holder's DynamicQR)",
-            "allOf": [{ "$ref": "#/components/schemas/JWMMessage" }]
-          }
-        },
-        "required": ["verifierDID", "vpTemplateId", "challenge", "message"]
       }
     }
   },

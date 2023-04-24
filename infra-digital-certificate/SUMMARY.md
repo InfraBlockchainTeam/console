@@ -12,12 +12,6 @@
 
     - [검증 절차](introduction/verify-flow.md)
 
-      - [VP Submit Request Step](introduction/verify-flow/step1.md)
-
-      - [VP Submit Step](introduction/verify-flow/step2.md)
-
-      - [VP Verify Step](introduction/verify-flow/step3.md)
-
   - [DID Token](introduction/did-token.md)
 
 - [시작하기](get-started.md)

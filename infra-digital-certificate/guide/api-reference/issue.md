@@ -44,15 +44,17 @@
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-## VCS
+## VC Issuance History
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs" method="get" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/history" method="get" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/{id}" method="get" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/history/{id}" method="get" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
+
+## VC Revocation
 
 {% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vcs/revoke/{id}" method="post" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
