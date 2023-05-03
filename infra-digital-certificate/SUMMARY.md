@@ -12,6 +12,8 @@
 
     - [검증 절차](introduction/verify-flow.md)
 
+      - [검증 사용자 시나리오](introduction/verify-flow/sequence.md)
+
   - [DID Token](introduction/did-token.md)
 
 - [시작하기](get-started.md)
