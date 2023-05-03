@@ -50,7 +50,7 @@
 
 ## VP Verification
 
-{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/verify/static/{requestId}" method="post" %}
+{% swagger src="../../.gitbook/assets/sample_2.json" path="/v1/vps/verify/static/{staticRequestId}" method="post" %}
 [sample_2.json](../../.gitbook/assets/sample_2.json)
 {% endswagger %}
 
